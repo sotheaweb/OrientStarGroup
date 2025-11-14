@@ -9,7 +9,7 @@ const HeroContainer = ({ img, title, des }) => {
 
       {/* Hero Image Background (Full, Not Cropped) */}
       <div 
-        className="fixed top-20 left-0 w-full h-[50vh] lg:h-screen -z-10 flex items-center justify-center bg-black"
+        className="fixed top-15 md:top-20 left-0 w-full h-[50vh] lg:h-screen -z-10 flex items-center justify-center bg-black"
         data-aos="fade-up"
         data-aos-duration="1000"  
       >
