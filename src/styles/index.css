@@ -34,3 +34,12 @@
   0% { transform: translateX(0%); }
   100% { transform: translateX(-70%); }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Optional: Custom scroll padding for section links */
+html {
+  scroll-padding-top: 80px; /* Adjust based on your navbar height */
+}

@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import president from "../../assets/About/president.png";
+import richard from "../../assets/About/richard.png"
+import billy from "../../assets/About/billy.png"
+import howard from "../../assets/About/howard.png"
+import alison from "../../assets/About/alison.png"
 
 const OurTeam = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -9,7 +13,7 @@ const OurTeam = () => {
     {
       name: "Richard Chu",
       position: "Director, Sales & Marketing",
-      image: president,
+      image: richard,
       description: `Alison leads regional strategy and digital innovation 
       at OST, driving growth and adaptability. She spearheads Orient Net,
       OST's in-house logistics platform, and shapes strategic planning and
@@ -18,25 +22,31 @@ const OurTeam = () => {
       logistics service provider.`,
     },
     {
-      name: "Jane Smith",
-      position: "Chief Operating Officer",
-      image: president,
-      description:
-        "Jane oversees global operations and ensures seamless coordination across departments. Her focus on efficiency and innovation has significantly optimized OST’s logistics and customer experience.",
+      name: "Billy Wong",
+      position: "Director, South East Asia and India",
+      image: billy,
+      description: `Alison leads regional strategy and digital innovation at OST,driving growth and adaptability. 
+                    She spearheads Orient Net,OST's in-house logistics platform, and shapes strategicplanning and 
+                    partner development.Her sharp market insights and tech-forward leadership arepowering OST's 
+                    evolution into a next-generation logisticsservice provider.`
+    },  
+    {
+      name: "Howard Tseng",
+      position: "Associate Director",
+      image: howard,
+      description: `Alison leads regional strategy and digital innovation at OST,driving growth and adaptability. 
+                    She spearheads Orient Net,OST's in-house logistics platform, and shapes strategicplanning and 
+                    partner development. Her sharp market insights and tech-forward leadership arepowering OST's 
+                    evolution into a next-generation logisticsservice provider.`
     },
     {
-      name: "Michael Lee",
-      position: "Finance Director",
-      image: president,
-      description:
-        "Michael drives OST’s financial growth strategies, managing budgets, forecasting, and investment. His financial acumen ensures the company’s sustainable expansion.",
-    },
-    {
-      name: "Sophia Chan",
-      position: "Director of HR & Development",
-      image: president,
-      description:
-        "Sophia fosters a culture of growth and collaboration at OST. She leads talent development, recruitment, and employee engagement across all regions.",
+      name: "Alison Tan",
+      position: "Associate Director",
+      image: alison,
+      description: `Alison leads regional strategy and digital innovation at OST,driving growth and adaptability. 
+                    She spearheads Orient Net,OST's in-house logistics platform, and shapes strategicplanning and 
+                    partner development. Her sharp market insights and tech-forward leadership arepowering OST's 
+                    evolution into a next-generation logisticsservice provider.`
     },
   ];
 

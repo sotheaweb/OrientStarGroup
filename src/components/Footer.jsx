@@ -24,22 +24,23 @@ const Footer = () => {
         {/* Logo & Info */}
         <div>
           <img src={logo} alt="Logo" className="w-40 mb-4" />
+          <h5 className="font-semibold">
+            KH ORIENT STAR LOGISTICS CO., LTD.
+          </h5>
           <p className="text-sm leading-6">
-            Room 8–10, 18/F, Ever Gain Plaza, Tower I,
-            <br />
-            88 Container Port Road, Kwai Chung,
-            <br />
-            N.T., Hong Kong.
+            <strong>Cambodia office</strong> :The Fortune Tower C7 16-07, Oknha Tep Phan St. (182) & Street 161,
+            Phum 7, Sangkat Veal Vong , Khan Prampi Makara, Phnom Penh , Cambodia
           </p>
-          <p className="text-sm mt-2">Tel: (852) 2217 1000</p>
-          <p className="text-sm">Fax: (852) 2317 6937</p>
+          <p className="text-sm mt-2">
+            Office phone : 087 666 324/ 087 666 430
+          </p>
           <p className="text-sm mt-2">
             Email:{" "}
             <a
               href="mailto:orientstar_hkg@orientstargroup.com"
               className="underline hover:text-gray-200"
             >
-              orientstar_hkg@orientstargroup.com
+              OSTPNH@orientstargroup.com
             </a>
           </p>
         </div>

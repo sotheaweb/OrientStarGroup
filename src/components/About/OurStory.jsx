@@ -1,95 +1,187 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const OurStory = () => {
   const [activeYear, setActiveYear] = useState(1984);
 
-  const timelineData = {
-    1984: {
-      title: "1984",
-      events: [
-        "Taipei office was established",
-        "Singapore office was established"
+  const timeNews = [
+    {
+      concludeYear: {
+        year: "1984-2000",
+        des: `In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, 
+              we faced numerous challenges; however, we successfully navigated those difficulties.
+              Before the new century, we had already established a preliminary service network in Asia.`,
+      },
+      eachYear: [
+        {
+          year: 1984,
+          des: `Taipei office was established
+                Singapore office was established`,
+        },
+        {
+          year: 1987,
+          des: `Hong Kong office was established`,
+        },
+        {
+          year: 1988,
+          des: `Bangkok office was established`,
+        },
+        {
+          year: 1992,
+          des: `Jakarta office was established`,
+        },
+        {
+          year: 2000,
+          des: `Xiamen office was established 
+                Shanghai office was established 
+                Qingdao office was established
+                Tianjin office was established 
+                Dalian office was established`,
+        },
       ],
-      description: "In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, we faced numerous challenges; however, we successfully navigated those difficulties."
     },
-    1987: {
-      title: "1987",
-      events: [],
-      description: "Expansion continued with new partnerships across Southeast Asia."
+    {
+      concludeYear: {
+        year: "1984-2000",
+        des: `In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, 
+              we faced numerous challenges; however, we successfully navigated those difficulties.
+              Before the new century, we had already established a preliminary service network in Asia.`,
+      },
+      eachYear: [
+        {
+          year: 1984,
+          des: `Taipei office was established
+                Singapore office was established`,
+        },
+        {
+          year: 1987,
+          des: `Hong Kong office was established`,
+        },
+        {
+          year: 1988,
+          des: `Bangkok office was established`,
+        },
+        {
+          year: 1992,
+          des: `Jakarta office was established`,
+        },
+        {
+          year: 2000,
+          des: `Xiamen office was established 
+                Shanghai office was established 
+                Qingdao office was established
+                Tianjin office was established 
+                Dalian office was established`,
+        },
+      ],
     },
-    1988: {
-      title: "1988",
-      events: [],
-      description: "Strengthened our logistics network and improved service quality."
+    {
+      concludeYear: {
+        year: "1984-2000",
+        des: `In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, 
+              we faced numerous challenges; however, we successfully navigated those difficulties.
+              Before the new century, we had already established a preliminary service network in Asia.`,
+      },
+      eachYear: [
+        {
+          year: 1984,
+          des: `Taipei office was established
+                Singapore office was established`,
+        },
+        {
+          year: 1987,
+          des: `Hong Kong office was established`,
+        },
+        {
+          year: 1988,
+          des: `Bangkok office was established`,
+        },
+        {
+          year: 1992,
+          des: `Jakarta office was established`,
+        },
+        {
+          year: 2000,
+          des: `Xiamen office was established 
+                Shanghai office was established 
+                Qingdao office was established
+                Tianjin office was established 
+                Dalian office was established`,
+        },
+      ],
     },
-    1992: {
-      title: "1992",
-      events: [],
-      description: "Further expanded our operations and established more regional offices."
-    }
-  };
+  ];
+
+  const timeline = timeNews[0];
 
   return (
     <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Title Section */}
-        <div className="text-center mb-12">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Our Story</h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Over more than 40 years of development, Orient Star has already built a strong network across South and East Asia. Our local offices promise clients with smooth transportation and native services.
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Title */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
+            Our Story
+          </h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-2">
+            Over more than 40 years, Orient Star has expanded across Asia with
+            multiple offices and strong networks.
           </p>
         </div>
 
-        <div className="border-t border-gray-300 my-8"></div>
+        {/* Conclude Year Box */}
+        <div className="bg-sky-100 border-l-4 border-sky-600 p-6 rounded-lg shadow-md">
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">
+            {timeline.concludeYear.year} Summary
+          </h2>
+          <p className="text-gray-800 whitespace-pre-line">
+            {timeline.concludeYear.des}
+          </p>
+        </div>
 
         {/* Timeline Section */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
-          {/* Timeline Years - Left Side */}
-          <div className="lg:w-2/5">
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">1984-2000</h3>
-              
-              <div className="space-y-4">
-                {Object.keys(timelineData).map((year) => (
-                  <div
-                    key={year}
-                    className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                      activeYear === parseInt(year) 
-                        ? 'bg-blue-100 border-l-4 border-blue-600' 
-                        : 'bg-white hover:bg-gray-100'
-                    }`}
-                    onMouseEnter={() => setActiveYear(parseInt(year))}
-                    onClick={() => setActiveYear(parseInt(year))}
-                  >
-                    <h4 className={`font-semibold text-lg ${
-                      activeYear === parseInt(year) ? 'text-blue-700' : 'text-gray-900'
-                    }`}>
-                      {year}
-                    </h4>
-                    {timelineData[year].events.length > 0 && (
-                      <div className="mt-2 space-y-1 ml-4">
-                        {timelineData[year].events.map((event, index) => (
-                          <p key={index} className="text-gray-700 text-sm">• {event}</p>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Left Sidebar: Years */}
+          <div className="lg:w-2/5 space-y-4">
+            {timeline.eachYear.map((yearItem) => (
+              <div
+                key={yearItem.year}
+                onMouseEnter={() => setActiveYear(yearItem.year)}
+                onClick={() => setActiveYear(yearItem.year)}
+                className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                  activeYear === yearItem.year
+                    ? "bg-blue-100 border-l-4 border-blue-600"
+                    : "bg-gray-50 hover:bg-gray-100"
+                }`}
+              >
+                <h4
+                  className={`font-semibold text-lg ${
+                    activeYear === yearItem.year
+                      ? "text-blue-700"
+                      : "text-gray-900"
+                  }`}
+                >
+                  {yearItem.year}
+                </h4>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Story Content - Right Side */}
-          <div className="lg:w-3/5">
-            <div className="bg-blue-50 p-6 rounded-lg h-full">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">1984-2000</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                {timelineData[activeYear].description}
-              </p>
-              <p className="text-gray-700 leading-relaxed">
-                Before the new century, we had already established a preliminary service network in Asia.
-              </p>
-            </div>
+          {/* Right Content Box */}
+          <div className="lg:w-3/5 flex flex-col gap-4 h-full">
+            {timeline.eachYear
+              .filter((y) => y.year === activeYear)
+              .map((yearItem) => (
+                <div
+                  key={yearItem.year}
+                  className="bg-blue-50 p-6 rounded-lg shadow-md transition-all duration-300 h-full"
+                >
+                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
+                    {yearItem.year}
+                  </h3>
+                  <p className="text-gray-700 whitespace-pre-line">
+                    {yearItem.des}
+                  </p>
+                </div>
+              ))}
           </div>
         </div>
       </div>

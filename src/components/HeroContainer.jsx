@@ -22,7 +22,7 @@ const HeroContainer = ({ img, title, des }) => {
 
       {/* Overlay Color (Optional subtle dark layer) */}
       <div 
-        className="fixed top-0 left-0 -z-10 w-full h-[50vh] lg:h-screen bg-black/5"
+        className="fixed top-0 left-0 -z-10 w-full h-[50vh] lg:h-screen bg-black/10"
         ata-aos="fade-up"
         data-aos-duration="1000"
       ></div>

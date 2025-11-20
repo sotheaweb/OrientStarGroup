@@ -13,22 +13,26 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* ===== LEFT: Company Info ===== */}
         <div className="lg:pr-40">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Hong Kong HQ</h2>
-
-          <h3 className="text-xl font-semibold mb-3">
-            Orient Star Logistics (HK) Ltd.
-          </h3>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center md:text-left">
+            KH ORIENT STAR LOGISTICS CO., LTD.
+          </h2>
 
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Room 8-10, 18/F, Ever Gain Plaza, Tower 1, 88 Container Port Road,
-            Kwai Chung, N.T., Hong Kong
+            <strong>Cambodia office</strong> :The Fortune Tower C7 16-07, Oknha Tep Phan St. (182) & Street 161,
+            Phum 7, Sangkat Veal Vong , Khan Prampi Makara, Phnom Penh , Cambodia
           </p>
 
           <p className="text-gray-700 mb-1">
-            <strong>Tel:</strong> (852) 2217 1000
+            <strong>Office phone :</strong>087 666 324/ 087 666 430 
           </p>
-          <p className="text-gray-700 mb-6">
-            <strong>Fax:</strong> (852) 2317 6937
+          <p className="text-sm mt-2 mb-2">
+            <strong>Email:</strong>{" "}
+            <a
+              href="mailto:orientstar_hkg@orientstargroup.com"
+              className="underline hover:text-sky-500"
+            >
+              OSTPNH@orientstargroup.com
+            </a>
           </p>
 
           <h4 className="text-lg font-semibold mb-3">Official Account</h4>

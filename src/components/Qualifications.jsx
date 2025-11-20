@@ -1,18 +1,23 @@
 import React, { useState } from "react";
-import logo from "../assets/About/logo1.png";
+import logo1 from "../assets/About/logo1.png";
 import logo2 from "../assets/About/logo2.jpg";
+import logo3 from "../assets/About/logo3.png";
+import logo4 from "../assets/About/logo4.png";
+import logo5 from "../assets/About/logo5.png";
+import logo6 from "../assets/About/logo6.png";
+import logo7 from "../assets/About/logo7.png";
 
 const Qualifications = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   const qualifications = [
-    { image: logo, title: "AMS Filer With Type I Bond For USA Shipment" },
-    { image: logo2, title: "C-TPAT Certified Partner" },
-    { image: logo, title: "WCA World Member" },
-    { image: logo, title: "AEO Certified Company" },
-    { image: logo, title: "IATA Accredited Agent" },
-    { image: logo, title: "ACI Registration Approved" },
-    { image: logo, title: "ACI Registration Approved" },
+    { image: logo1, title: "AMS Filer With Type I Bond For USA Shipment" },
+    { image: logo2, title: "AMS Filer With Type I Bond For USA Shipment" },
+    { image: logo3, title: "AMS Filer With Type I Bond For USA Shipment" },
+    { image: logo4, title: "AMS Filer With Type I Bond For USA Shipment" },
+    { image: logo5, title: "AMS Filer With Type I Bond For USA Shipment" },
+    { image: logo6, title: "AMS Filer With Type I Bond For USA Shipment" },
+    { image: logo7, title: "AMS Filer With Type I Bond For USA Shipment" },
   ];
 
   return (
@@ -50,7 +55,7 @@ const Qualifications = () => {
                   className="w-full h-25 object-contain transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
-              <p className="opacity-0 group-hover:opacity-100 text-center text-gray-700 text-sm mt-3 w-40 transition-opacity duration-500">
+              <p className="lg:opacity-0 lg:group-hover:opacity-100 text-center text-gray-700 text-sm mt-3 w-40 transition-opacity duration-500">
                 {item.title}
               </p>
             </div>
