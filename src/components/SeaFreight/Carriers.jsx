@@ -3,38 +3,40 @@ import service1 from "../../assets/SeaFreight/service1.png";
 import service6 from "../../assets/SeaFreight/service6.png"
 import service7 from "../../assets/SeaFreight/service7.png"
 import service8 from "../../assets/SeaFreight/service8.png"
-
+import { useTranslation } from "react-i18next";
 
 const Carriers = () => {
+  const { t } = useTranslation("seaFreight");
+
     const services = [
         {
         image: service1,
-        title: "Contracts",
-        description: "We have more than 20 service contracts signed with varied carriers.",
+        title: t('carriers.item.contracts1.title'),
+        description: t('carriers.item.contracts1.desc')
         },
         {   
         image: service6,    
-        title: "Routing Options",
-        description:
-            "Various routing options of different carriers are available.",
+        title: t('carriers.item.routingOptions.title'),
+        description: t('carriers.item.routingOptions.desc'),
         },
         {
         image: service7,
-        title: "Contracts",
-        description:
-            "We handle project shipments to and from all Asia countries.",
+        title: t('carriers.item.contracts2.title'),
+        description: t('carriers.item.contracts2.desc'),
         },
         {
         image: service8,
-        title: "Multi-modal Transportation",
-        description:
-            "We provide multi-modal transportation service from every origin to inland points.",
+        title: t('carriers.item.multiModalTransportation.title'),
+        description: t('carriers.item.multiModalTransportation.desc'),
         },
     ];
 
   return (
     <section className="bg-white w-full px-4 sm:px-8 lg:px-16 py-20">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800">
           Carriers, Routes & Modes

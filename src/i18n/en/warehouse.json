@@ -1,0 +1,101 @@
+{
+    "integratedLogistics": {
+        "title": "Integrated Logistics",
+        "desc": "Your supply chain, simplifed. Orient Star Group powers seamless logistics-from purchase order to fnal mile-as your trusted partner in growth.",
+        "contactButton": "Contact Us"
+    },
+
+    "navbarScroll": {
+        "section1": "POMS, IMS & WMS, TMS",
+        "section2":"Value-added Services",
+        "section3": "Benefits",
+        "section4": "Qualifcations",
+        "section5": "Contact Form"
+    },
+
+    "POMS": {
+        "title": "PO Management System",
+        "item1": {
+            "title": "Integrates with the Internet"
+        },
+        "item2": {
+            "title": "Worldwide, interactive, real-time info"
+        },
+        "item3": {
+            "title": "Maximized customer values"
+        },
+        "item4": {
+            "title": "Availability of EDI"
+        }
+    },
+
+    "IMSWMS": {
+        "title": "Inventory & Warehouse Management System",
+        "item1": {
+            "title": "Better control of cargoes movement"
+        },
+        "item2": {
+            "title": "Reduce the overall logistics cost"
+        },
+        "item3": {
+            "title": "Real-time and precise Classification"
+        }
+    },
+
+    "TMS": {
+        "title": "Transport Management System",
+        "item1": {
+            "title": "Effective planning and execution"
+        },
+        "item2": {
+            "title": "Digital freight management"
+        },
+        "item3": {
+            "title": "Dashboard, reporting & analytics"
+        },
+        "item4": {
+            "title": "Discover TMS in Sea Freight and Air Freight"
+        }
+    },
+
+    "value": {
+        "title": "Value-added Services",
+        "desc": "Apart from the logistics services, Orient Star provides multiple plans to empower our clients' values.",
+        "item1": {
+            "title": "Customs & Compliance"
+        },
+        "item2": {
+            "title": "EDI & Documentation Support"
+        },
+        "item3": {
+            "title": "Visibility Platform"
+        },
+        "item4": {
+            "title": "Pick & Pack, Labelling, Palletization"
+        },
+        "item5": {
+            "title": "Reverse Logistics"
+        },
+        "item6": {
+            "title": "Order Fulfillment"
+        }
+    },
+
+    "benifits": {
+        "title": "Benifits",
+        "desc": "To sum up, our services benefit clients in four dimensions: reducing both humanand non-human error, saving costs, faster fulfillment and improved visibility gresponsiveness.",
+        "item1": {
+            "title": "Error reduction"
+        },
+        "item2": {
+            "title": "Cost savings"
+        },
+        "item3": {
+            "title": "Faster fulfillment"
+        },
+        "item4": {
+            "title": "lmproved visibility and responsiveness"
+        }
+    }
+
+}

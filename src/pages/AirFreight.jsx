@@ -2,32 +2,35 @@ import React from 'react'
 import hero from "../assets/AirFreight/heroAirFreight.jpg"
 import HeroContainer from '../components/HeroContainer'
 import Overview from '../components/AirFreight/Overview'
-import ITSolution from '../components/SeaFreight/ITSolution'
 import Qualifications from '../components/Qualifications'
 import ContactUs from '../components/ContactUs'
 import NavbarScroll from '../components/NavbarScroll'
+import { useTranslation } from 'react-i18next'
 
 const AirFreight = () => {
 
+  const { t } = useTranslation("airFreight");
+
   const Hero = {
     image: hero,
-    title: "Air Freight",
-    des: `For time-sensitive and high-value cargo.our fast and effcient air freight 
-          servicesensure swift delivery worldwide.
-          With real-time tracking and experthandling, we prioritize your shipments tomeet tight 
-          deadlines, offering peace ofmind.`
+    title: t('ariFreight.title'),
+    des: t('ariFreight.desc'),
+    contactBtn: t('ariFreight.contactBtn')
   }
 
-  const menu = ["Overview", "IT Solutions", "Qualifcations", "Contact Form"]
+  const menu = [
+    {id: "1", label: "Overview"}, 
+    {id: "2", label: "Qualifcations"}, 
+    {id: "3", label: "Contact Form"}
+  ]
 
   return (
     <div>
-      <HeroContainer img={Hero.image} title={Hero.title} des={Hero.des}/>
+      <HeroContainer img={Hero.image} title={Hero.title} des={Hero.des} contactBtn={Hero.contactBtn}/>
       <NavbarScroll menu={menu}/>
-      <div id="Overview"><Overview /></div>
-      <div id="IT Solutions"><ITSolution /></div>
-      <div id="Qualifcations"><Qualifications /></div>
-      <div id="Contact Form"><ContactUs /></div>
+      <div id="1"><Overview /></div>
+      <div id="2"><Qualifications /></div>
+      <div id="3"><ContactUs /></div>
     </div>
   )
 }

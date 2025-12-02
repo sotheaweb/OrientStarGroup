@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const NavbarScroll = ({ menu }) => {
   const [isAtTop, setIsAtTop] = useState(false);
-  const [activeSection, setActiveSection] = useState(menu[0]);
+  const [activeSection, setActiveSection] = useState(menu[0].id);
   const observerRef = useRef(null);
 
   useEffect(() => {
@@ -26,9 +26,8 @@ const NavbarScroll = ({ menu }) => {
 
     observerRef.current = new IntersectionObserver(observerCallback, options);
 
-    // Use menu from props
-    menu.forEach(sectionId => {
-      const section = document.getElementById(sectionId);
+    menu.forEach(item => {
+      const section = document.getElementById(item.id);
       if (section) observerRef.current.observe(section);
     });
 
@@ -49,22 +48,22 @@ const NavbarScroll = ({ menu }) => {
   };
 
   return (
-    <nav className={`fixed w-full shadow-md z-30 transition-all duration-300 hidden lg:block
+    <nav className={`fixed w-full shadow-md z-40 transition-all duration-300 hidden lg:block
         ${isAtTop ? "top-23 bg-sky-600 max-w-full" : "bottom-0"}`}
     >
       <div className="container mx-auto px-4 py-3 border-t-1 border-white">
         <ul className="flex justify-around space-x-8 text-gray-100">
 
-          {menu.map(id => (
-            <li key={id}>
+          {menu.map(item => (
+            <li key={item.id}>
               <button
-                onClick={(e) => handleSectionClick(id, e)}
+                onClick={(e) => handleSectionClick(item.id, e)}
                 className={`transition-all duration-300 font-medium px-3 py-2 cursor-pointer
-                  ${isActive(id)
+                  ${isActive(item.id)
                     ? "text-amber-300 border-b-2 border-t-amber-300"
                     : "hover:text-amber-300"}`}
               >
-                {id}
+                {item.label}
               </button>
             </li>
           ))}

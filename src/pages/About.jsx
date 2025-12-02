@@ -7,22 +7,44 @@ import Qualifications from '../components/Qualifications'
 import ContactUs from '../components/ContactUs'
 import heroImage from "../assets/About/heroAbout.jpg";
 import NavbarScroll from '../components/NavbarScroll'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
 
+  const { t } = useTranslation("about");
+
   const heroData = { 
       image: heroImage,
-      title: "About Us",
-      description: `Established in 1984 in Taiwan, Orient StarGroup boasts over 41 years
-                    of experience in the logistics industry, ensuring a reputation for
-                    strong credibility and professionalism.`
+      title: t('aboutUs.title'),
+      description: t('aboutUs.intro'),
+      contactBtn: t('aboutUs.contactBtn')
   }
 
-  const menu = ["President's Message", "Our Story", "Meet Our Team", "Qualifications", "Contact Form"];
+  const menu = [
+    {
+      id: "President's Message",
+      label:t('navbarScroll.presidentMessage')}, 
+    {
+      id: 'Our Story',
+      label: t("navbarScroll.ourStory")
+    }, 
+    {
+      id: 'Meet Our Team',
+      label: t("navbarScroll.meetOurTeam")
+    }, 
+    {
+      id: 'Qualifications',
+      label: t("navbarScroll.qualifications")
+    }, 
+    {
+      id: 'Contact Form',
+      label: t("navbarScroll.contactForm")
+    }
+  ];
 
   return (
     <div>
-      <HeroContainer img={heroData.image} title={heroData.title} des={heroData.description} />
+      <HeroContainer img={heroData.image} title={heroData.title} des={heroData.description} contactBtn={heroData.contactBtn}/>
       <NavbarScroll menu={menu}/>
       <div id="President's Message">
         <Welcome />
@@ -31,7 +53,6 @@ const About = () => {
       <div id='Our Story'>
         <OurStory />
       </div>
-
       <div id='Meet Our Team'>
         <OurTeam />
       </div>

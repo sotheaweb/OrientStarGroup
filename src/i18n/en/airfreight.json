@@ -1,0 +1,44 @@
+{
+    "ariFreight": {
+        "title": "Air Freight",
+        "desc": "For time-sensitive and high-value cargo.our fast and effcient air freight servicesensure swift delivery worldwide. With real-time tracking and experthandling, we prioritize your shipments tomeet tight deadlines, offering peace ofmind",
+        "contactBtn": "Contact Us"
+    },
+
+    "navbarScroll": {
+        "section1": "Overview",
+        "section2": "Services",
+        "section3": "Contact Form"
+    },
+
+    "overView": {
+        "title": "Overview",
+        "desc": "In addition to sea freight, we also handle a full range of air freight transportation, specializing for time-critical cargoes.",
+        "item": {
+            "customized": {
+                "title": "Customized",
+                "desc": "We offer customized air freight service for major international routes."
+            },
+            "fast": {
+                "title": "Fast",
+                "desc": "Fast transit time for sample shipment and time sensitive shipments."
+            },
+            "door": {
+                "title": "Door",
+                "desc": "Door delivery and pick up service."
+            },
+            "complex": {
+                "title": "Complex",
+                "desc": "To move both single and complex air shipments"
+            },
+            "consolidation": {
+                "title": "Consolidation",
+                "desc": "Air consolidation service to and from Asia."
+            },
+            "customs": {
+                "title": "Customs",
+                "desc": "Customs clearance at both origin and destination."
+            }
+        }
+    }
+}

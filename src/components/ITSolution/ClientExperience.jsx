@@ -6,8 +6,11 @@ import c4 from "../../assets/ITSolution/c4.png";
 import c5 from "../../assets/ITSolution/c5.png";
 import c6 from "../../assets/ITSolution/c6.png";
 import c7 from "../../assets/ITSolution/c7.png";
+import { useTranslation } from "react-i18next";
 
 const ClientExperience = () => {
+  const { t } = useTranslation("itsolution");
+
   const cardData = [
     { image: c2, title: "Self-Service Portal", des: `Full access of bookings, documents, and shipment updates anytime.` },
     { image: c3, title: "Direct Communication", des: `Full access of bookings, documents, and shipment updates anytime.` },
@@ -23,20 +26,32 @@ const ClientExperience = () => {
         {/* Left Section */}
         <div className="lg:w-1/3 flex flex-col gap-6">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800"
+              data-aos="fade-rigth"
+              data-aos-duration="1000"
+            >
               Client Experience & Usability
             </h1>
-            <p className="text-gray-600 mt-4 max-w-md text-sm sm:text-base text-start">
+            <p className="text-gray-600 mt-4 max-w-md text-sm sm:text-base text-start"
+              data-aos="fade-rigth"
+              data-aos-duration="1000"
+            >
               Designed for ease of use and collaboration
             </p>
           </div>
-          <div>
+          <div
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <img src={c1} alt="Main Illustration" className="w-full rounded-lg" />
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="w-full lg:w-[55%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-full lg:w-[55%] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           {cardData.map((service, index) => (
             <div
               key={index}
@@ -59,7 +74,8 @@ const ClientExperience = () => {
               </div>
 
               {/* Title */}
-              <h3 className="hidden lg:block absolute top-30 group-hover:opacity-0 text-sm">
+              <h3 className="hidden lg:block absolute top-30 group-hover:opacity-0 text-sm"
+              >
                 {service.title}
               </h3>
 

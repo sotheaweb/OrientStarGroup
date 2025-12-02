@@ -1,0 +1,27 @@
+{
+    "location":{
+        "title": "KH ORIENT STAR LOGISTICS CO., LTD.",
+        "address": "Cambodia office :The Fortune Tower C7 16-07, Oknha Tep Phan St. (182) & Street 161, Phum 7, Sangkat Veal Vong , Khan Prampi Makara, Phnom Penh , Cambodia",
+        "phone": "Office phone : 087 666 324/ 087 666 430",
+        "email": "Email"
+    },
+
+    "services":{
+        "title": "Services",
+        "service1": "Sea Freight",
+        "service2": "Air Freight",
+        "service3": "3PL & Warehouse",
+        "service4": "IT Solutions"
+    },
+
+    "company":{
+        "title": "Company",
+        "aboutUs": "About Us",
+        "contact": "Contact",
+        "newsroom": "Newsroom"
+    },
+
+    "contact":{
+        "title": "Contact with Us"
+    }
+}

@@ -1,0 +1,56 @@
+{
+    "itSolution": {
+        "title": "IT Solutions",
+        "desc": "At Orient Star Group, technology is.atthe heart of our logistics operations.Our integrated digital platformempowers you with real-timevisibility, automation, and control-delivering smarter, faster, and morereliable supply chain execution.",
+        "contactBtn": "Contact Us"
+    },
+
+    "navbarScroll": {
+        "section1": "Core System Capabilities",
+        "section2": "Integration & Connectivity",
+        "section3": "Visibility, Control & Analytics",
+        "section4": "Client Experience & Usability"
+    },
+
+    "coreSystem": {
+        "title": "Core System Capabilities",
+        "desc": "Our portal brings together all key logistics functions in one place",
+        "item1": {
+            "title": "Client Portal",
+            "desc": "Centralized access to all services and data"
+        },
+        "item2": {
+            "title": "POMS",
+            "desc": "Purchase Order Management: Track PO status, manage releases, and monitor fulfillment progress."
+        },
+        "item3": {
+            "title": "IMS/MS",
+            "desc": "Inventory & Warehouse Management: Monitor warehouse trends and stock levels across locations."
+        },
+        "item4": {
+            "title": "TMS",
+            "desc": "Transportation Management: Schedule shipments, view booking details, and track milestones across air and ocean."
+        },
+        "item5": {
+            "title": "Quotation & Billing",
+            "desc": "Request quotes, access billing summaries, and download invoices with ease."
+        }
+    },
+
+    "integration": {
+        "title": "Integration & Connectivity",
+        "desc": "Our portal brings together all key logistics functions in one place.",
+        "item1": {
+            "title": "API & EDI Integration",
+            "desc": "Real-time data exchange with your ERP, WMS, or marketplace platforms."
+        },
+        "item2": {
+            "title": "Custom Data Mapping & Automation",
+            "desc": "Tailored integration workflows to match your business processes."
+        },
+        "item3": {
+            "title": "Multi-System Sync",
+            "desc": "Unified view across all platforms."
+        }
+    }
+}

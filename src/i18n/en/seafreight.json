@@ -1,0 +1,55 @@
+{
+    "seaFreight": {
+        "title": "Sea Freight ",
+        "desc": "Our reliable global shipping solutions are designed to meet your diverse needs, ensuring timely and secure delivery. With a vast network and advanced technology, we handle all cargo types, providing cost-effective and efficient services.",
+        "contactBtn": "Contact Us"
+    },
+
+    "navbarScroll": {
+        "section1": "Accreditation",
+        "section2": "Range of Services",
+        "section3": "Carriers, Routes & Modes",
+        "section4": "Contact Form"
+    },
+
+    "accreditation": {
+        "title": "JOC Ranking",
+        "desc": "Top NVOCC in Trans-Pacific Market",
+        "subDesc": "TEUs handled in 2024"
+    },
+
+    "rangeOfService": {
+        "title": "Range of Services",
+        "intro": "A comprehensive range of services are available for inbound, outbound and cross-trade movements.",
+        "service": {
+            "FCL": "Full Container Load",
+            "LCL": "Less than Container Load",
+            "consolidation": "Consolidation",
+            "doorToDoor": "Door to Door",
+            "customeServices": "Customs Services"
+        }
+    },
+
+    "carriers": {
+        "title": "Carriers, Routes & Modes",
+        "desc": "A comprehensive range of services are available for inbound, outbound and cross-trade movements.",
+        "item": {
+            "contracts1":  {
+                "title": "Contracts",
+                "desc": "We have more than 20 service contracts signed with varied carriers."
+            },
+            "routingOptions": {
+                "title": "Routing Options",
+                "desc": "Various routing options of different carriers are available."
+            },
+            "contracts2":  {
+                "title": "Contracts",
+                "desc": "We handle project shipments to and from all Asia countries."
+            },
+            "multiModalTransportation":  {
+                "title": "Multi-modal Transportation",
+                "desc": "We provide multi-modal transportation service from every origin to inland points."
+            }
+        }
+    }
+}

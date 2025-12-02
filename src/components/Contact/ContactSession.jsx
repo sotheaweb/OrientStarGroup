@@ -6,11 +6,17 @@ import {
   FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const ContactSection = () => {
+  const { t } = useTranslation("contact");
+
   return (
     <div className="bg-white px-6 sm:px-10 lg:px-20 py-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         {/* ===== LEFT: Company Info ===== */}
         <div className="lg:pr-40">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center md:text-left">
@@ -56,18 +62,18 @@ const ContactSection = () => {
 
         {/* ===== RIGHT: Inquiry Form ===== */}
         <div>
-          <h2 className="text-3xl sm:text-4xl font-bold mb-8">Inquiry Form</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8">{t('form.title')}</h2>
           <form className="flex flex-col gap-5">
             {/* Row 1 */}
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="email"
-                placeholder="Email:"
+                placeholder= {t('form.email')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
               <input
                 type="text"
-                placeholder="Company Name:"
+                placeholder= {t('form.companyName')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
@@ -76,19 +82,19 @@ const ContactSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
-                placeholder="Name:"
+                placeholder= {t('form.name')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
               <input
                 type="text"
-                placeholder="Subject:"
+                placeholder= {t('form.subject')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
 
             {/* Message */}
             <textarea
-              placeholder="Please leave your message here..."
+              placeholder= {t('form.message')}
               rows="5"
               className="w-full p-3 rounded-lg bg-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
             ></textarea>
@@ -99,7 +105,7 @@ const ContactSection = () => {
                 type="submit"
                 className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300"
               >
-                Submit
+                {t('form.submit')}
               </button>
             </div>
           </form>

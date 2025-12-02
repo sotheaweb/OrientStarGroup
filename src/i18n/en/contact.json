@@ -1,0 +1,27 @@
+{
+    "contactUs": {
+    "title": "Contact Us",
+    "desc": "You are always welcome to contact us, no matter by walking in, online form, phone call or offcial account."
+    },
+
+    "navbarScroll": {
+        "contactForm": "Ho & inquiry Form",
+        "globslNetwork": "Global Network", 
+        "officeDirectoty": "Office Directory"
+    },
+    
+    "form": {
+        "title": "Inquiry Form",
+        "email": "Email",
+        "companyName": "Company Name",
+        "name": "Name",
+        "subject": "Subject",
+        "message": "Please leave your message here...",
+        "submit": "Submit"
+    },
+
+    "globalNetwork": {
+        "title": "Global Network",
+        "desc": "Our reliable global shipping solutions are designed to meet your diverse needs, ensuring timely and secure delivery. With a vast network and advanced technology, we handle all cargo types, providing cost-effective and efficient services."
+    }
+}

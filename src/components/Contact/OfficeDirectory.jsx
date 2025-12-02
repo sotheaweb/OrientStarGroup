@@ -97,7 +97,7 @@ const OfficeDirectory = () => {
     { 
         id: 16, 
         name: "Phnom Penh (Cambodia)", 
-        address: "Straits Building, No. 1008 CD, St. 128 , Sangkat Toeuk Laok1 , Khan Toul Kork, Phnom Penh , Cambodia", 
+        address: `The Fortune Tower C7 16-07, Oknha Tep Phan St. (182) & Street 161,Phum 7, Sangkat Veal Vong , Khan Prampi Makara, Phnom Penh , Cambodia`, 
         category: "Southeast Asia" 
     },
     { 
@@ -172,7 +172,10 @@ const OfficeDirectory = () => {
 
   return (
     <div className="bg-white px-6 sm:px-10 lg:px-20 py-16">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         {/* Header and Filter */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-10 gap-4">
           <h1 className="text-3xl sm:text-4xl font-bold text-center sm:text-left">

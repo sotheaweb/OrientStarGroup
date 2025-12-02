@@ -4,33 +4,41 @@ import b1 from "../../assets/Warehouse/b1.png";
 import b2 from "../../assets/Warehouse/b2.png";
 import b3 from "../../assets/Warehouse/b3.png";
 import b4 from "../../assets/Warehouse/b4.png";
+import { useTranslation } from "react-i18next";
 
 const Benefit = () => {
+  const { t } = useTranslation('warehouse');
+
   const services = [
-    { image: b1, title: "Error reduction" },
-    { image: b2, title: "Cost savings" },
-    { image: b3, title: "Faster fulfillment" },
-    { image: b4, title: "lmproved visibility and responsiveness" },
+    { image: b1, title: t('benifits.item1.title') },
+    { image: b2, title: t('benifits.item2.title') },
+    { image: b3, title: t('benifits.item3.title') },
+    { image: b4, title: t('benifits.item4.title') },
 
   ];
 
   return (
     <section className="bg-white py-20 lg:py-40">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-col lg:flex-row items-center justify-between lg:px-20 xl:px-0">
-        {/* Right Text Section */}
-        <div className="w-full lg:w-1/2 text-center lg:text-start mt-12 lg:mt-0 lg:flex lg:flex-col items-start">
+        {/* left Text Section */}
+        <div className="w-full lg:w-1/2 text-center lg:text-start mt-12 lg:mt-0 lg:flex lg:flex-col items-start"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-snug">
-            Benefits
+            {t('benifits.title')}
           </h2>
           <p className="text-gray-500 mt-6 px-5 lg:px-0 leading-relaxed max-w-md mx-auto lg:mx-0 lg:text-start">
-            To sum up, our services benefit clients in four dimensions: reducing both humanand non-human 
-            error, saving costs, faster fulfillment and improved visibility gresponsiveness.
+            {t('benifits.desc')}
           </p>
           <div className="mt-8 w-40 h-2 bg-gradient-to-r from-blue-800 to-blue-400 rounded-full mx-auto lg:mx-0"></div>
         </div>
 
         {/* Left Section */}
-        <div className="w-full lg:w-1/2 flex flex-col items-center">
+        <div className="w-full lg:w-1/2 flex flex-col items-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           {/* ✅ Circle layout only visible on lg+ */}
           <div className="relative hidden lg:flex w-[450px] h-[450px] items-center justify-center">
             {/* Outer Circle */}

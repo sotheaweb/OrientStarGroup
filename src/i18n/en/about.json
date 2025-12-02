@@ -1,0 +1,141 @@
+{
+  "aboutUs": {
+    "title": "About Us",
+    "intro": "Established in 1984 in Taiwan, Orient StarGroup boasts over 41 years of experience in the logistics industry, ensuring a reputation for strong credibility and professionalism.",
+    "contactBtn": "Contact Us"
+  },
+
+  "navbarScroll": {
+    "presidentMessage": "President's Message",
+    "ourStory": "Our Story",
+    "meetOurTeam": "Meet Our Team", 
+    "qualifications":"Qualifications", 
+    "contactForm": "Contact Form"
+  },
+
+  "welcome": {
+    "title": "Welcome to Orient Star Group",
+    "intro": "Since 1984, Orient Star Group has been a trusted partner in global logistics, evolving with the demands of trade. Today, we go beyond transporting goods—we deliver seamless, innovative solutions that drive your success.",
+    "mission": "Our mission is built on four pillars:",
+    "list": {
+      "innovation": {
+        "title": "Innovation in Action:",
+        "desc": "We harness cutting-edge tools to ensure fast, reliable logistics. Real-time tracking and streamlined operations keep your business moving with precision."
+      },
+      "global": {
+        "title": "Global Reach, Local Expertise:",
+        "desc": "Our network across Greater China, Southeast Asia, and India delivers unmatched regional insight and responsiveness."
+      },
+      "partnership": {
+        "title": "Partnerships That Last:",
+        "desc": "We build trust through tailored service and deep market knowledge. Our dedicated teams work closely with you to turn opportunities into results."
+      },
+      "empower": {
+        "title": "Empowering Our People:",
+        "desc": "We invest in continuous training to cultivate skilled professionals. Our team’s expertise and growth drive our ability to serve you better."
+      }
+    },
+    "conclusion": "With a legacy of resilience and a vision for the future, Orient Star Group makes global logistics effortless for your business.",
+    "thanks": "Thank you for being part of our story.",
+    "presidentName": "Jonathan Tseng",
+    "presidentPosition": "President"
+  },
+
+  "ourStory": {
+    "title": "Our Story",
+    "intro": "Over more than 40 vears of development, Orient Star has already built a strong network across South and East Asia. Our local offices promise clients with smooth transportation and native services.",
+    "timeline": [
+      {
+        "conclude": {
+          "year": "1984-2000",
+          "des": "In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, we facednumerous challenges; however, we successfully navigated those difficulties.\n\nBefore the new century, we had already established a preliminary service network in Asia."
+        },
+        "years":[
+          {"year":"1984", "event":"Taipei office was established, Singapore office was established"},
+          {"year":"1987", "event":"Hong Kong office was established"},
+          {"year":"1988", "event":"Bangkok office was established"},
+          {"year":"1992", "event":"Jakarta office was established"},
+          {"year":"2000", "event":"Xiamen office was established, Shanghai office was established, Qingdao office was established, Tianjin office was established, Dalian office was established"}
+        ]
+      },
+      {
+        "conclude": {
+          "year": "2001-2010",
+          "des": "In the early 21st century, we experienced a period of rapid growth. in 2000, we established fiveoffices in Mainland China: Xiamen, Shanghai, Qingdao, Tianjin, and Dalian. These offices markedour official entry into the promising Mainland Chinese market, laying a solid foundation for thecompany's future expansion in the region. \n \nEven amidst the turbulence of the alobal financial market, we sustained a stable growth trajectoryand continually optimized our service network throughout Southeast Asia."
+        },
+        "years":[
+          {"year":"2001", "event":"Malaysia office was established"},
+          {"year":"2002", "event":"Shenzhen office was established, Manila office was established"},
+          {"year":"2004", "event":"Ningbo office was established, Sermarang office was established"},
+          {"year":"2007", "event":"Guangzhou office was established, Fuzhou office was established"},
+          {"year":"2008", "event":"Vietnam office was established"}
+        ]
+      },
+      {
+        "conclude": {
+          "year": "2011-2020",
+          "des": "During this decade, as the company experienced steady growth, we recognized the significantpotential of india as an emerging market. In 2014, adopting a forward-thinking strategy, weestablished our first office in Mumbai, followed by the opening of a second office in Chenna.\n\nTo date, with Hong Kong serving as our headquarters, we have developed a robust pan-Asianservice network, enabling us to deliver high-quality, localized services to our clients."
+        },
+        "years":[
+          {"year":"2013", "event":"Xi'an office was established, Zhongshan office was established"},
+          {"year":"2014", "event":"Mumbai office was established"},
+          {"year":"2015", "event":"Chennai office was established"}
+        ]
+      },
+      {
+        "conclude": {
+          "year": "2021-Present",
+          "des": "While the COViD-19 pandemic has undeniably affected global trade, it has concurrently presentednew development opportunities, in this new decade, alobalization continues to be the prevailingtrend.\n\nAs a result, we are proactively seeking additional partners and agents, with the goal of establishingstable and reliable strategic partnerships for mutual benefit."
+        },
+        "years":[
+          {"year": "2025", "event": ""}
+        ]
+      }
+    ]
+  },
+
+  "meetOurTeam": {
+    "title": "Meet Our Team",
+    "intro": "Orient Star benefits from the unwavering support of its professional and experienced teammembers, who consistently dedicate their full effort to fulfilling their responsibilities.",
+    "teamMembers": {
+      "member1": {
+        "name": "Richard Chu",
+        "position": "Director, Sales & Marketing",
+        "bio": "With over 20 years in logistics, Richard rose through the ranks at Evergreen before joining OST as General Manager in 2000. Now Sales & Marketing Director, he's a driving force behind OST's rapid growth and bold shift from traditional freight forwarding to a full-spectrum, tech-enabled logistics service provider."
+      },
+      "member2": {
+        "name": "Billy Wong",
+        "position": "Director, South East Asia and India",
+        "bio": "Billy joined OST in 2005 as a Marketing Trainee, quickly gaining cross-departmental experience. He helped launch the 3PL Department in 2010 and became Director of Southeast Asia & India in 2014. His deep logistics expertise and operational leadership have been key to OST's regional growth and international expansion."
+      },
+      "member3": {
+        "name": "Howard Tseng",
+        "position": "Associate Director",
+        "bio": "As Associate Director at OST, Howard leads Central and North China operations and heads regional pricing across the Group. With experience in Taipei, Hong Kong, Shenzhen, and Shanghai, he drives strategic growth and strengthens carrier relationships. His pricing leadership and cross-city expertise are key to OST's competitiveness in the market."
+      },
+      "member4": {
+        "name": "Alison Tan",
+        "position": "Associate Director",
+        "bio": "Alison leads regional strategy and digital innovation at OST, driving growth and adaptability. She spearheads Orient Net, OST's in-house logistics platform, and shapes strategic planning and partner development. Her sharp market insights and tech-forward leadership are powering OST's evolution into a next-generation logistics service provider."
+      }
+    }
+  },
+
+  "qualifications": {
+    "title": "Qualifications",
+    "intro": "Our reliable global shipping solutions are designed to meet your diverse needs, ensuring timely and secure delivery. With a vast network and advanced technology, we handle all cargo types, providing cost-effective and efficient services."
+  },
+
+  "contactUs": {
+    "title": "Contact Us",
+    "desc": "We will get to you as soon as we can.",
+    "form": {
+      "email": "Email:",
+      "nameCompany": "Name Conmpany:",
+      "name": "Name:",
+      "subject": "Subject:",
+      "message": "Please leave your message here...",
+      "submit": "Submit"
+    }
+  }
+}

@@ -1,192 +1,156 @@
-import React, { useState } from "react";
+import { div, image } from "framer-motion/client";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import image1 from "../../assets/About/1984-2000.png";
+import image2 from "../../assets/About/2001-2010.png";
+import image3 from "../../assets/About/2011-2020.png";
 
-const OurStory = () => {
-  const [activeYear, setActiveYear] = useState(1984);
+export default function OurStory() {
+  const { t } = useTranslation("about");
 
-  const timeNews = [
+  const data = [
     {
-      concludeYear: {
-        year: "1984-2000",
-        des: `In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, 
-              we faced numerous challenges; however, we successfully navigated those difficulties.
-              Before the new century, we had already established a preliminary service network in Asia.`,
-      },
-      eachYear: [
-        {
-          year: 1984,
-          des: `Taipei office was established
-                Singapore office was established`,
-        },
-        {
-          year: 1987,
-          des: `Hong Kong office was established`,
-        },
-        {
-          year: 1988,
-          des: `Bangkok office was established`,
-        },
-        {
-          year: 1992,
-          des: `Jakarta office was established`,
-        },
-        {
-          year: 2000,
-          des: `Xiamen office was established 
-                Shanghai office was established 
-                Qingdao office was established
-                Tianjin office was established 
-                Dalian office was established`,
-        },
+      period: t('ourStory.timeline.0.conclude.year'),
+      years: [
+        { year: t("ourStory.timeline.0.years.0.year"), desc: t("ourStory.timeline.0.years.0.event") },
+        { year: t("ourStory.timeline.0.years.1.year"), desc: t("ourStory.timeline.0.years.1.event") },
+        { year: t("ourStory.timeline.0.years.2.year"), desc: t("ourStory.timeline.0.years.2.event") },
+        { year: t("ourStory.timeline.0.years.3.year"), desc: t("ourStory.timeline.0.years.3.event") },
+        { year: t("ourStory.timeline.0.years.4.year"), desc: t("ourStory.timeline.0.years.4.event") },
       ],
+      title: t('ourStory.timeline.0.conclude.year'),
+      text: t('ourStory.timeline.0.conclude.des'),
+      image: image1
     },
     {
-      concludeYear: {
-        year: "1984-2000",
-        des: `In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, 
-              we faced numerous challenges; however, we successfully navigated those difficulties.
-              Before the new century, we had already established a preliminary service network in Asia.`,
-      },
-      eachYear: [
-        {
-          year: 1984,
-          des: `Taipei office was established
-                Singapore office was established`,
-        },
-        {
-          year: 1987,
-          des: `Hong Kong office was established`,
-        },
-        {
-          year: 1988,
-          des: `Bangkok office was established`,
-        },
-        {
-          year: 1992,
-          des: `Jakarta office was established`,
-        },
-        {
-          year: 2000,
-          des: `Xiamen office was established 
-                Shanghai office was established 
-                Qingdao office was established
-                Tianjin office was established 
-                Dalian office was established`,
-        },
+      period: t('ourStory.timeline.1.conclude.year'),
+      years: [
+        { year: t("ourStory.timeline.1.years.0.year"), desc: t("ourStory.timeline.1.years.0.event") },
+        { year: t("ourStory.timeline.1.years.1.year"), desc: t("ourStory.timeline.1.years.1.event") },
+        { year: t("ourStory.timeline.1.years.2.year"), desc: t("ourStory.timeline.1.years.2.event") },
+        { year: t("ourStory.timeline.1.years.3.year"), desc: t("ourStory.timeline.1.years.3.event") },
+        { year: t("ourStory.timeline.1.years.4.year"), desc: t("ourStory.timeline.1.years.4.event") },
       ],
+      title: t('ourStory.timeline.1.conclude.year'),
+      text: t('ourStory.timeline.1.conclude.des'),
+      image: image2
     },
     {
-      concludeYear: {
-        year: "1984-2000",
-        des: `In 1984, Jonathan Tseng founded the Orient Star Group in Taiwan. As a start-up, 
-              we faced numerous challenges; however, we successfully navigated those difficulties.
-              Before the new century, we had already established a preliminary service network in Asia.`,
-      },
-      eachYear: [
-        {
-          year: 1984,
-          des: `Taipei office was established
-                Singapore office was established`,
-        },
-        {
-          year: 1987,
-          des: `Hong Kong office was established`,
-        },
-        {
-          year: 1988,
-          des: `Bangkok office was established`,
-        },
-        {
-          year: 1992,
-          des: `Jakarta office was established`,
-        },
-        {
-          year: 2000,
-          des: `Xiamen office was established 
-                Shanghai office was established 
-                Qingdao office was established
-                Tianjin office was established 
-                Dalian office was established`,
-        },
+      period: t('ourStory.timeline.2.conclude.year'),
+      years: [
+        { year: t("ourStory.timeline.2.years.0.year"), desc: t("ourStory.timeline.2.years.0.event") },
+        { year: t("ourStory.timeline.2.years.1.year"), desc: t("ourStory.timeline.2.years.1.event") },
+        { year: t("ourStory.timeline.2.years.2.year"), desc: t("ourStory.timeline.2.years.2.event") },
       ],
+      title: t('ourStory.timeline.2.conclude.year'),
+      text: t('ourStory.timeline.2.conclude.des'),
+      image: image3
+    },
+    {
+      period: t('ourStory.timeline.3.conclude.year'),
+      years: [
+        { year: t("ourStory.timeline.3.years.0.year"), desc: t("ourStory.timeline.3.years.0.event") },
+      ],
+      title: t('ourStory.timeline.3.conclude.year'),
+      text: t('ourStory.timeline.3.conclude.des'),
     },
   ];
 
-  const timeline = timeNews[0];
-
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-8">
-        {/* Title */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-            Our Story
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-2">
-            Over more than 40 years, Orient Star has expanded across Asia with
-            multiple offices and strong networks.
-          </p>
+    <div className="w-full bg-white py-10 px-5">
+        <div className="max-w-7xl mx-auto mb-10 "
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+            <div className=" mb-8">
+                <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">{t('ourStory.title')}</h1>
+                <p className="text-lg text-gray-600 max-w-3xl mt-2">{t('ourStory.intro')}</p>
+            </div>
         </div>
+        <div className="flex justify-center">
+            <div className="relative max-w-7xl w-full ">
+            {/* Vertical Line */}
+            <div className="hidden lg:block absolute left-1/4 top-0 h-full border-l-5 border-sky-900"></div>
 
-        {/* Conclude Year Box */}
-        <div className="bg-sky-100 border-l-4 border-sky-600 p-6 rounded-lg shadow-md">
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">
-            {timeline.concludeYear.year} Summary
-          </h2>
-          <p className="text-gray-800 whitespace-pre-line">
-            {timeline.concludeYear.des}
-          </p>
-        </div>
-
-        {/* Timeline Section */}
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Left Sidebar: Years */}
-          <div className="lg:w-2/5 space-y-4">
-            {timeline.eachYear.map((yearItem) => (
-              <div
-                key={yearItem.year}
-                onMouseEnter={() => setActiveYear(yearItem.year)}
-                onClick={() => setActiveYear(yearItem.year)}
-                className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-                  activeYear === yearItem.year
-                    ? "bg-blue-100 border-l-4 border-blue-600"
-                    : "bg-gray-50 hover:bg-gray-100"
-                }`}
-              >
-                <h4
-                  className={`font-semibold text-lg ${
-                    activeYear === yearItem.year
-                      ? "text-blue-700"
-                      : "text-gray-900"
-                  }`}
-                >
-                  {yearItem.year}
-                </h4>
-              </div>
-            ))}
-          </div>
-
-          {/* Right Content Box */}
-          <div className="lg:w-3/5 flex flex-col gap-4 h-full">
-            {timeline.eachYear
-              .filter((y) => y.year === activeYear)
-              .map((yearItem) => (
+            {data.map((item, index) => (
                 <div
-                  key={yearItem.year}
-                  className="bg-blue-50 p-6 rounded-lg shadow-md transition-all duration-300 h-full"
+                key={index}
+                className="flex flex-col-reverse lg:flex-row lg:justify-between gap-8 mb-20"
                 >
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    {yearItem.year}
-                  </h3>
-                  <p className="text-gray-700 whitespace-pre-line">
-                    {yearItem.des}
-                  </p>
+                {/* Left Years */}
+                <div className="lg:w-1/4 text-right lg:pr-6">
+                    <h2 className="hidden lg:block text-2xl font-bold text-sky-600 mb-4"
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    >
+                      {item.period}
+                    </h2>
+                    <div className="space-y-6 text-gray-700 font-semibold">
+                    {item.years.map((y, idx) => (
+                        <div key={idx} className="lg:relative">
+                        {/* Year Box (Only hover this!) */}
+                        <div className="group inline-block lg:cursor-pointer mx-auto w-full bg-gray-50 py-2 rounded-lg lg:bg-white">
+                            <p className="transition-all duration-300 md:text-xl lg:text-2xl px-5 lg:p-2"
+                              data-aos="fade-up"
+                              data-aos-duration="1000"
+                            >
+                              {y.year}
+                            </p>
+
+                            {/* Description Box - ONLY show when hover year */}
+                            <div
+                            className="
+                                lg:absolute
+                                top-0
+                                left-82 
+                                lg:w-[17vw]
+                                p-3 
+                                lg:border 
+                                lg:border-gray-200 
+                                rounded-lg 
+                                shadow-lg 
+                                lg:opacity-0 
+                                lg:group-hover:opacity-100 
+                                transition 
+                                duration-300 
+                                break-words
+                                pointer-events-none
+                            "
+                            >
+                            <p className="text-sm text-gray-600 text-left">
+                                {y.desc}
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+                    ))}
+                    </div>
                 </div>
-              ))}
-          </div>
+
+                {/* Circle Indicator */}
+                <div className="hidden xl:block -ml-79 z-10">
+                    <div className="w-5 h-5 bg-white border-2 border-sky-500 rounded-full"></div>
+                </div>
+
+                {/* Right Content */}
+                <div className="lg:w-2/4"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                >
+                    <div className="bg-gray-50 shadow-md rounded-xl p-6">
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-gray-700 whitespace-pre-line mb-4">
+                        {item.text}
+                    </p>
+                    </div>
+                    <div className="mt-10">
+                      <img src={item.image} alt="" className="w-70"/>
+                    </div>
+                </div>
+                </div>
+            ))}
+            </div>
         </div>
-      </div>
     </div>
   );
-};
-
-export default OurStory;
+}

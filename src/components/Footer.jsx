@@ -8,9 +8,11 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import logo from "../assets/footer.png"; // Adjust path
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation("foot");
 
   const handleNavigate = (path) => {
     navigate(path);
@@ -18,24 +20,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0b3b91] text-white pt-16 pb-8">
+    <footer className="bg-sky-600 text-white pt-16 pb-8">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
         {/* Logo & Info */}
         <div>
           <img src={logo} alt="Logo" className="w-40 mb-4" />
           <h5 className="font-semibold">
-            KH ORIENT STAR LOGISTICS CO., LTD.
+            {t('location.title')}
           </h5>
           <p className="text-sm leading-6">
-            <strong>Cambodia office</strong> :The Fortune Tower C7 16-07, Oknha Tep Phan St. (182) & Street 161,
-            Phum 7, Sangkat Veal Vong , Khan Prampi Makara, Phnom Penh , Cambodia
+            {t('location.address')}
           </p>
           <p className="text-sm mt-2">
-            Office phone : 087 666 324/ 087 666 430
+            {t('location.phone')}
           </p>
           <p className="text-sm mt-2">
-            Email:{" "}
+            {t('location.email')}:{" "}
             <a
               href="mailto:orientstar_hkg@orientstargroup.com"
               className="underline hover:text-gray-200"
@@ -48,32 +49,32 @@ const Footer = () => {
         {/* Services */}
         <div>
           <h3 className="text-lg font-semibold mb-4 border-b border-white/20 pb-2">
-            Services
+            {t('services.title')}
           </h3>
           <ul className="space-y-2 text-sm">
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/services/sea-freight")}
             >
-              Sea Freight
+              {t('services.service1')}
             </li>
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/services/air-freight")}
             >
-              Air Freight
+              {t('services.service2')}
             </li>
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/services/3pl-warehouse")}
             >
-              3PL & Warehouse
+              {t('services.service3')}
             </li>
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/services/it-solutions")}
             >
-              IT Solutions
+              {t('services.service4')}
             </li>
           </ul>
         </div>
@@ -81,26 +82,26 @@ const Footer = () => {
         {/* Company */}
         <div>
           <h3 className="text-lg font-semibold mb-4 border-b border-white/20 pb-2">
-            Company
+            {t('company.title')}
           </h3>
           <ul className="space-y-2 text-sm">
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/about")}
             >
-              About Us
+              {t('company.aboutUs')}
             </li>
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/contact")}
             >
-              Contact
+              {t('company.contact')}
             </li>
             <li
               className="hover:underline hover:text-gray-200 cursor-pointer"
               onClick={() => handleNavigate("/newsroom")}
             >
-              Newsroom
+              {t('company.newsroom')}
             </li>
           </ul>
         </div>
@@ -108,7 +109,7 @@ const Footer = () => {
         {/* Social Media */}
         <div>
           <h3 className="text-lg font-semibold mb-4 border-b border-white/20 pb-2">
-            Connect with us
+            {t('contact.title')}
           </h3>
           <div className="flex space-x-3 mt-2">
             {[FaLinkedinIn, FaYoutube, FaInstagram, FaFacebookF, FaXTwitter].map(

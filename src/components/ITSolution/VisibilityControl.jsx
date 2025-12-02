@@ -57,7 +57,10 @@ const VisibilityControl = () => {
   return (
     <section className="w-full bg-white py-20 overflow-hidden px-5">
       {/* Header */}
-      <div className="text-center">
+      <div className="text-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
           Visibility, Control & Analytics
         </h1>
@@ -67,7 +70,10 @@ const VisibilityControl = () => {
       </div>
 
       {/* Images Wrapper */}
-      <div className="relative max-w-7xl mx-auto mt-10 flex items-center justify-center px-5">
+      <div className="relative max-w-7xl mx-auto mt-10 flex items-center justify-center px-5"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         {/* Left button */}
         <button
           onClick={handlePrev}
@@ -84,12 +90,12 @@ const VisibilityControl = () => {
 
         {/* PC frame (center) */}
         <div className="relative w-full max-w-4xl flex justify-center">
-          <img src={pc} className="w-full" />
+          <img src={pc} className="w-full z-10" />
 
           {/* Sliding Screen Image */}
           <img
             src={CardData[index].image}
-            className={`absolute top-[5%] w-[97%] h-[65%] object-cover rounded-lg shadow-md transition-transform duration-700 ease-in-out
+            className={`absolute top-[5%] w-[97%] h-[65%] object-cover rounded-sm shadow-md transition-transform duration-700 ease-in-out
               ${slide ? "translate-x-full opacity-0" : "translate-x-0 opacity-100"}
             `}
           />

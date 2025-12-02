@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HeroContainer = ({ img, title, des }) => {
+
+const HeroContainer = ({ img, title, des, contactBtn }) => {
   return (
     <div 
       className="relative"
     >
-
       {/* Hero Image Background (Full, Not Cropped) */}
       <div 
         className="fixed top-15 md:top-20 left-0 w-full h-[50vh] lg:h-screen -z-10 flex items-center justify-center bg-black"
@@ -22,7 +22,7 @@ const HeroContainer = ({ img, title, des }) => {
 
       {/* Overlay Color (Optional subtle dark layer) */}
       <div 
-        className="fixed top-0 left-0 -z-10 w-full h-[50vh] lg:h-screen bg-black/10"
+        className="fixed top-0 left-0 -z-10 w-full h-[59vh] lg:h-screen bg-black/10"
         ata-aos="fade-up"
         data-aos-duration="1000"
       ></div>
@@ -41,7 +41,7 @@ const HeroContainer = ({ img, title, des }) => {
         </p>
         <Link to="/contact">
           <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-md transition-all duration-300 text-sm sm:text-base cursor-pointer">
-            Contact Us
+            {contactBtn}
           </button>
         </Link>
       </div>

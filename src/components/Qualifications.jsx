@@ -6,9 +6,11 @@ import logo4 from "../assets/About/logo4.png";
 import logo5 from "../assets/About/logo5.png";
 import logo6 from "../assets/About/logo6.png";
 import logo7 from "../assets/About/logo7.png";
+import { useTranslation } from "react-i18next";
 
 const Qualifications = () => {
   const [isPaused, setIsPaused] = useState(false);
+  const { t } = useTranslation("about");
 
   const qualifications = [
     { image: logo1, title: "AMS Filer With Type I Bond For USA Shipment" },
@@ -22,14 +24,17 @@ const Qualifications = () => {
 
   return (
     <div className="bg-white w-full py-16 px-4 overflow-hidden">
-      <h1 className="text-center text-4xl font-extrabold text-gray-900 mb-4">
-        Qualifications
+      <h1 className="text-center text-4xl font-extrabold text-gray-900 mb-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        {t('qualifications.title')}
       </h1>
-      <p className="max-w-3xl mx-auto text-gray-500 mb-10 text-justify px-4">
-        Our reliable global shipping solutions are designed to meet your diverse
-        needs, ensuring timely and secure delivery. With a vast network and
-        advanced technology, we handle all cargo types, providing cost-effective
-        and efficient services.
+      <p className="max-w-3xl mx-auto text-gray-500 mb-10 text-justify px-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        {t('qualifications.intro')}
       </p>
 
       {/* Scrolling container */}

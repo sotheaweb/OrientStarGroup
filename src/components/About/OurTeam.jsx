@@ -4,49 +4,25 @@ import richard from "../../assets/About/richard.png"
 import billy from "../../assets/About/billy.png"
 import howard from "../../assets/About/howard.png"
 import alison from "../../assets/About/alison.png"
+import { useTranslation } from "react-i18next";
 
 const OurTeam = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [sizes, setSizes] = useState({ expanded: 35, collapsed: 20, normal: 25 });
+  const { t } = useTranslation("about");
 
   const teamMembers = [
     {
-      name: "Richard Chu",
-      position: "Director, Sales & Marketing",
       image: richard,
-      description: `Alison leads regional strategy and digital innovation 
-      at OST, driving growth and adaptability. She spearheads Orient Net,
-      OST's in-house logistics platform, and shapes strategic planning and
-      partner development. Her sharp market insights and tech-forward
-      leadership are powering OST's evolution into a next-generation
-      logistics service provider.`,
     },
     {
-      name: "Billy Wong",
-      position: "Director, South East Asia and India",
       image: billy,
-      description: `Alison leads regional strategy and digital innovation at OST,driving growth and adaptability. 
-                    She spearheads Orient Net,OST's in-house logistics platform, and shapes strategicplanning and 
-                    partner development.Her sharp market insights and tech-forward leadership arepowering OST's 
-                    evolution into a next-generation logisticsservice provider.`
     },  
     {
-      name: "Howard Tseng",
-      position: "Associate Director",
       image: howard,
-      description: `Alison leads regional strategy and digital innovation at OST,driving growth and adaptability. 
-                    She spearheads Orient Net,OST's in-house logistics platform, and shapes strategicplanning and 
-                    partner development. Her sharp market insights and tech-forward leadership arepowering OST's 
-                    evolution into a next-generation logisticsservice provider.`
     },
     {
-      name: "Alison Tan",
-      position: "Associate Director",
       image: alison,
-      description: `Alison leads regional strategy and digital innovation at OST,driving growth and adaptability. 
-                    She spearheads Orient Net,OST's in-house logistics platform, and shapes strategicplanning and 
-                    partner development. Her sharp market insights and tech-forward leadership arepowering OST's 
-                    evolution into a next-generation logisticsservice provider.`
     },
   ];
 
@@ -72,14 +48,23 @@ const OurTeam = () => {
 
   return (
     <div className="w-full flex flex-col items-center justify-center py-20 bg-gray-100 px-5">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 text-center">
-        Meet Our Team
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        {t('meetOurTeam.title')}
       </h1>
-      <p className="text-gray-500 mt-6 max-w-2xl text-center">
-        Orient Star benefits from the unwavering support of its professional and experienced team members.
+      <p className="text-gray-500 mt-6 max-w-2xl text-center"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        {t('meetOurTeam.intro')}
       </p>
 
-      <div className="mt-12 w-full max-w-7xl">
+      <div className="mt-12 w-full max-w-7xl"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <div className="flex flex-col md:px-20 lg:flex-row justify-center gap-6 md:gap-10 lg:gap-6 lg:px-0">
           {teamMembers.map((member, index) => {
             const isHovered = hoveredIndex === index;
@@ -118,7 +103,7 @@ const OurTeam = () => {
                 >
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={t(`meetOurTeam.teamMembers.member${index+1}.name`)}
                     className="w-20 h-20 rounded-full border-4 border-white shadow-md object-cover"
                   />
                   <div className={`${isHovered ? "text-left" : "text-center"}`}>
@@ -127,14 +112,14 @@ const OurTeam = () => {
                         isHovered ? "text-white" : "text-gray-800"
                       }`}
                     >
-                      {member.name}
+                      {t(`meetOurTeam.teamMembers.member${index+1}.name`)}
                     </h2>
                     <p
                       className={`mt-1 ${
                         isHovered ? "text-gray-200" : "text-gray-600"
                       }`}
                     >
-                      {member.position}
+                      {t(`meetOurTeam.teamMembers.member${index+1}.position`)}
                     </p>
                   </div>
                 </div>
@@ -151,7 +136,7 @@ const OurTeam = () => {
                     maxHeight: isHovered ? "1200px" : "0px",
                   }}
                 >
-                  <p className="text-sm leading-relaxed">{member.description}</p>
+                  <p className="text-sm leading-relaxed">{t(`meetOurTeam.teamMembers.member${index+1}.bio`)}</p>
                 </div>
               </div>
             );

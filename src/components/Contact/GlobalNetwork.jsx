@@ -1,26 +1,31 @@
 import React from "react";
 import image from "../../assets/Contact/globalnetwork.jpg";
-import { div } from "framer-motion/client";
+import { useTranslation } from "react-i18next";
 
 const GlobalNetwork = () => {
-  return (
+  const { t } = useTranslation("contact");
 
+  return (
     <div className="bg-white py-16 px-4 sm:px-8 lg:px-20 relative">
         {/* Title Section */}
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Global Network
+            {t('globalNetwork.title')}
             </h1>
 
             <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-            Our reliable global shipping solutions are designed to meet your diverse needs,
-            ensuring timely and secure delivery. With a vast network and advanced technology,
-            we handle all cargo types, providing cost-effective and efficient services.
+              {t('globalNetwork.desc')}  
             </p>
         </div>
 
       {/* Image Section */}
-        <div className="max-w-6xl mx-auto mt-10">
+        <div className="max-w-6xl mx-auto mt-10"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
             <img
             src={image}
             alt="Global network map"
@@ -29,7 +34,6 @@ const GlobalNetwork = () => {
         </div>
 
     </div>
-
   );
 };
 
