@@ -16,6 +16,8 @@ import itsolutionEn from "./en/itsolution.json";
 import itsolutionKh from "./kh/itsolution.json";
 import contactEn from "./en/contact.json";
 import contactKh from "./kh/contact.json";
+import newsEn from "./en/news.json";
+import newsKh from "./kh/news.json";
 
 i18n
   .use(initReactI18next)
@@ -30,6 +32,7 @@ i18n
             warehouse: warehouseEn,
             itSolution: itsolutionEn,
             contact: contactEn,
+            news: newsEn
         },
         kh: { 
             nav: navKh,
@@ -40,6 +43,7 @@ i18n
             warehouse: warehouseKh,
             itSolution: itsolutionKh,
             contact: contactKh,
+            news: newsKh
         }
     },
     lng: "en",              

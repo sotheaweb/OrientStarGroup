@@ -4,23 +4,26 @@ import pc from "../../assets/ITSolution/pc.png";
 import analyst from "../../assets/ITSolution/analyst.jpg";
 import dashboard1 from "../../assets/ITSolution/dashboard1.jpg";
 import dashboard2 from "../../assets/ITSolution/dashboard2.jpg";
+import { useTranslation } from "react-i18next";
 
 const VisibilityControl = () => {
+  const {t} = useTranslation('itSolution')
+
   const CardData = [
     {
       image: analyst,
-      title: "Performance Dashboards",
-      des: "Visualize shipment volumes, warehouse trends, and purchase order statuses in one glance—empowering smarter, faster decisions.",
+      title: t('visibility.items.0.title'),
+      des: t('visibility.items.0.desc'),
     },
     {
       image: dashboard1,
-      title: "Shipment Visibility",
-      des: "Track your purchase order status, ETA, freight movement and delays in real-time.",
+      title: t('visibility.items.1.title'),
+      des: t('visibility.items.1.desc'),
     },
     {
       image: dashboard2,
-      title: "Warehouse Insights",
-      des: "Monitor inventory movements, storage usage, and picking activities instantly.",
+      title: t('visibility.items.2.title'),
+      des: t('visibility.items.2.desc'),
     },
   ];
 
@@ -62,10 +65,10 @@ const VisibilityControl = () => {
         data-aos-duration="1000"
       >
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-          Visibility, Control & Analytics
+          {t('visibility.title')}
         </h1>
         <p className="text-gray-600 mt-2 text-sm sm:text-base">
-          Stay in control with real-time insights and proactive alerts
+          {t('visibility.desc')}
         </p>
       </div>
 

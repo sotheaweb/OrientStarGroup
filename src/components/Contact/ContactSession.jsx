@@ -37,7 +37,7 @@ const ContactSection = () => {
               href="mailto:orientstar_hkg@orientstargroup.com"
               className="underline hover:text-sky-500"
             >
-              OSTPNH@orientstargroup.com
+              orientstar_hkg@orientstargroup.com
             </a>
           </p>
 
@@ -52,7 +52,7 @@ const ContactSection = () => {
             ].map((social, i) => (
               <div
                 key={i}
-                className="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full text-gray-600 hover:bg-blue-500 hover:text-white transition-all duration-300"
+                className="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full text-gray-600 hover:bg-sky-500 hover:text-white transition-all duration-300 cursor-pointer"
               >
                 {social.icon}
               </div>
@@ -69,12 +69,12 @@ const ContactSection = () => {
               <input
                 type="email"
                 placeholder= {t('form.email')}
-                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
               <input
                 type="text"
                 placeholder= {t('form.companyName')}
-                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
             </div>
 
@@ -83,12 +83,12 @@ const ContactSection = () => {
               <input
                 type="text"
                 placeholder= {t('form.name')}
-                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
               <input
                 type="text"
                 placeholder= {t('form.subject')}
-                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
             </div>
 
@@ -96,14 +96,14 @@ const ContactSection = () => {
             <textarea
               placeholder= {t('form.message')}
               rows="5"
-              className="w-full p-3 rounded-lg bg-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full p-3 rounded-lg bg-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-sky-400"
             ></textarea>
 
             {/* Captcha and Button */}
             <div className="flex flex-col sm:flex-row items-center gap-4">
               <button
                 type="submit"
-                className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300"
+                className="w-full sm:w-auto px-8 py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-all duration-300 cursor-pointer"
               >
                 {t('form.submit')}
               </button>

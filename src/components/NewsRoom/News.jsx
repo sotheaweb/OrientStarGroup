@@ -1,33 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const News = ({ newsData }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const {t} = useTranslation('news')
   const navigate = useNavigate();
 
-  const itemsPerPage = 3;
-  const totalPages = Math.ceil(newsData.length / itemsPerPage);
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentNews = newsData.slice(startIndex, startIndex + itemsPerPage);
-
-  const handlePageClick = (page) => {
-    setCurrentPage(page);
-  };
-
-  const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-  };
-
-  const handlePrev = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
 
   return (
     <section className="px-4 sm:px-8 md:px-16 lg:px-24 py-10 bg-gray-50">
       <div className="flex flex-col gap-5 max-w-7xl mx-auto">
-        {currentNews.map((item) => (
+        {newsData.map((item) => (
           <div
             key={item.id}
             className="flex flex-col md:flex-row group h-100 md:h-50 lg:h-50 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden"
@@ -47,7 +30,9 @@ const News = ({ newsData }) => {
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800 group-hover:text-sky-600 transition">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 mt-3 line-clamp-3">{item.desc}</p>
+                <p className="text-gray-600 mt-3 line-clamp-3">
+                  {item.desc.slice(0, 150) + "..."}
+                </p>
               </div>
 
               <div className="mt-4 flex w-full items-center justify-between">
@@ -56,56 +41,12 @@ const News = ({ newsData }) => {
                   onClick={() => navigate(`/news/${item.id}`)}
                   className="text-sky-600 font-medium hover:text-sky-700 transition cursor-pointer"
                 >
-                  Read More →
+                  {t('readMore')} →
                 </button>
               </div>
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Pagination with numbers + icons */}
-      <div className="flex justify-center items-center gap-2 mt-6 flex-wrap">
-        {/* Previous Icon */}
-        <button
-          onClick={handlePrev}
-          disabled={currentPage === 1}
-          className={`px-3 py-3 rounded-full cursor-pointer ${
-            currentPage === 1
-              ? "text-gray-400 cursor-not-allowed"
-              : "text-gray-400 hover:text-white hover:bg-sky-600"
-          } transition`}
-        >
-          <FaChevronLeft />
-        </button>
-
-        {/* Page Numbers */}
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button
-            key={index + 1}
-            onClick={() => handlePageClick(index + 1)}
-            className={`px-4 py-2 rounded-full cursor-pointer ${
-              currentPage === index + 1
-                ? "text-white cursor-not-allowed bg-sky-600"
-                : "text-gray-700 hover:text-white hover:bg-sky-600 "
-            } transition`}
-          >
-            {index + 1}
-          </button>
-        ))}
-
-        {/* Next Icon */}
-        <button
-          onClick={handleNext}
-          disabled={currentPage === totalPages}
-          className={`px-3 py-3 rounded-full cursor-pointer ${
-            currentPage === totalPages
-              ? "text-gray-400 cursor-not-allowed"
-              : "text-gray-400 hover:text-white hover:bg-sky-600"
-          } transition`}
-        >
-          <FaChevronRight />
-        </button>
       </div>
     </section>
   );

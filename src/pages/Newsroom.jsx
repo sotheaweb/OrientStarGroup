@@ -1,47 +1,34 @@
 import React from 'react'
 import Page1 from '../components/NewsRoom/Hero.jsx'
 import News from '../components/NewsRoom/News.jsx'
-import heronews from '../assets/News/heronews.jpg'
-import laptop from '../assets/News/laptop.jpg'
+import seaFreight from '../assets/News/seaFreight.jpg'
 import technology from '../assets/News/technology.jpg'
+import { useTranslation } from 'react-i18next'
 
 const Newsroom = () => {
+  const {t} = useTranslation('news');
 
-  const sampleNews = [
+  const news = [
     {
       id: 1,
-      title: "JOC Rankings: Disruption boosts NVOs to majority share",
-      desc: "US importers have increasingly turned to non-vessel-operating common carriers...",
-      image: laptop,
-      date: "2025-04-08",
+      title: t('joc.title'),
+      desc: t('joc.desc'),
+      image: seaFreight,
+      date: t('joc.date'),
     },
     {
       id: 2,
-      title: "OST HONGKONG WAREHOUSE - Inventory & Warehouse System",
-      desc: "Our sophisticated warehouse providing 3rd party logistics solution for cargo distribution...",
+      title: t('ost.title'),
+      desc: t('ost.desc'),
       image: technology,
-      date: "2025-04-09",
-    },
-    {
-      id: 3,
-      title: "Trade Expansion Drives Logistics Growth in Asia-Pacific",
-      desc: "Asia-Pacific logistics markets are seeing strong growth due to increased cross-border trade...",
-      image: heronews,
-      date: "2025-04-10",
-    },
-    {
-      id: 4,
-      title: "Technology Modernizing Freight Systems",
-      desc: "Digital transformation continues to streamline freight and shipping processes worldwide...",
-      image: heronews,
-      date: "2025-04-11",
-    },
+      date: t('ost.date'),
+    }
   ];
 
   return (
     <div>
-      <Page1 />
-      <News newsData={sampleNews} />
+      <Page1 newsData={news} />
+      <News newsData={news} />
     </div>
   )
 }

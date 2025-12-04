@@ -52,5 +52,24 @@
             "title": "Multi-System Sync",
             "desc": "Unified view across all platforms."
         }
+    },
+
+    "visibility": {
+        "title": "Visibility, Control & Analytics",
+        "desc": "Stay in control with real-time insights and proactive alerts",
+        "items": [
+            {
+                "title": "Performance Dashboards",
+                "desc": "Visualize shipment volumes, warehouse trends, and purchase order statuses in one glance—empowering smarter, faster decisions."
+            },
+            {
+                "title": "Shipment Visibility",
+                "desc": "Track your purchase order status, ETA, freight movement and delays in real-time."
+            },
+            {
+                "title": "Warehouse Insights",
+                "desc": "Monitor inventory movements, storage usage, and picking activities instantly."
+            }
+        ]
     }
 }

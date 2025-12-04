@@ -135,7 +135,12 @@
       "name": "Name:",
       "subject": "Subject:",
       "message": "Please leave your message here...",
-      "submit": "Submit"
+      "submit": "Submit",
+      "missing": "Missing Information",
+      "descE": "Please fill in all fields before submitting.",
+      "comfirm": "Ok",
+      "success": "Success!",
+      "descS": "Message sent successfully!"
     }
   }
 }

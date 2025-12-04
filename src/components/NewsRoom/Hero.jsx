@@ -1,43 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import heroImage from "../../assets/News/heronews.jpg";
+import { useTranslation } from "react-i18next";
 
-const Hero = () => {
+const Hero = ({newsData}) => {
+  const {t} = useTranslation('news')
   const navigate = useNavigate();
-
-  const Newshero = [
-    {
-      id: 1,
-      image: heroImage,
-      date: "April 8, 2025",
-      title: "Breaking News: The Rise of Modern Newsrooms",
-      description:
-        "Discover how digital transformation is reshaping the modern newsroom — from storytelling to instant updates that reach global audiences.",
-      content:
-        "Digital transformation is not just a buzzword anymore — it's redefining how journalism operates. From real-time updates to data-driven storytelling, newsrooms are becoming more interactive and audience-focused. This article dives deep into how technology is reshaping news production and distribution in 2025.",
-    },
-    {
-      id: 2,
-      image: heroImage,
-      date: "April 12, 2025",
-      title: "Tech Trends Transforming Journalism in 2025",
-      description:
-        "AI, data analytics, and digital ethics are shaping the next generation of journalism like never before.",
-      content:
-        "Artificial intelligence is automating repetitive newsroom tasks and helping journalists analyze massive datasets quickly. However, ethical considerations about AI bias and misinformation detection remain critical in 2025’s media landscape.",
-    },
-    {
-      id: 3,
-      image: heroImage,
-      date: "April 20, 2025",
-      title: "Inside the Future of Media: Interactive Storytelling",
-      description:
-        "Explore how multimedia storytelling brings readers closer to the news experience.",
-      content:
-        "The rise of interactive storytelling combines text, visuals, and immersive media to give readers agency in how they consume stories. Journalists are now becoming experience designers, blending emotion with interactivity.",
-    },
-  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -50,12 +18,12 @@ const Hero = () => {
   }, []);
 
   const nextHero = () => {
-    setCurrentIndex((prev) => (prev + 1) % Newshero.length);
+    setCurrentIndex((prev) => (prev + 1) % newsData.length);
   };
 
   const prevHero = () => {
     setCurrentIndex(
-      (prev) => (prev - 1 + Newshero.length) % Newshero.length
+      (prev) => (prev - 1 + newsData.length) % newsData.length
     );
   };
 
@@ -64,7 +32,7 @@ const Hero = () => {
       {/* Header */}
       <div className="mb-10 text-center" data-aos="fade-up">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-3">
-          Newsroom
+          {t('newsRoom')}
         </h1>
       </div>
 
@@ -76,7 +44,7 @@ const Hero = () => {
             transform: `translateX(-${currentIndex * 100}%)`,
           }}
         >
-          {Newshero.map((item) => (
+          {newsData.map((item) => (
             <div
               key={item.id}
               className="flex flex-col lg:flex-row w-full flex-shrink-0"
@@ -99,13 +67,13 @@ const Hero = () => {
                   {item.title}
                 </h2>
                 <p className="text-gray-600 text-sm sm:text-base mb-5 leading-relaxed">
-                  {item.description}
+                  {item.desc.slice(0, 130) + "..."}
                 </p>
                 <button
-                  onClick={() => navigate(`/news/${item.id}`)} // ✅ navigate to detail page
-                  className="self-start px-5 sm:px-6 py-2 bg-blue-600 text-white rounded-full text-xs sm:text-sm font-medium hover:bg-blue-700 transition-colors duration-300 shadow-md"
+                  onClick={() => navigate(`/news/${item.id}`)} 
+                  className="self-start px-5 sm:px-6 py-2 bg-blue-600 text-white rounded-full text-xs sm:text-sm font-medium hover:bg-blue-700 transition-colors duration-300 shadow-md cursor-pointer"
                 >
-                  Read More
+                  {t('readMore')}
                 </button>
               </div>
             </div>
@@ -115,20 +83,20 @@ const Hero = () => {
         {/* Navigation Buttons */}
         <button
           onClick={prevHero}
-          className="absolute top-1/2 left-3 sm:left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 p-2 sm:p-3 rounded-full shadow-md transition"
+          className="absolute top-1/2 left-3 sm:left-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 p-2 sm:p-3 rounded-full shadow-md transition cursor-pointer"
         >
           <FaChevronLeft size={16} />
         </button>
         <button
           onClick={nextHero}
-          className="absolute top-1/2 right-3 sm:right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 p-2 sm:p-3 rounded-full shadow-md transition"
+          className="absolute top-1/2 right-3 sm:right-4 transform -translate-y-1/2 bg-white/70 hover:bg-white text-gray-700 p-2 sm:p-3 rounded-full shadow-md transition cursor-pointer"
         >
           <FaChevronRight size={16} />
         </button>
 
         {/* Dots Indicator */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-          {Newshero.map((_, i) => (
+          {newsData.map((_, i) => (
             <div
               key={i}
               onClick={() => setCurrentIndex(i)}
