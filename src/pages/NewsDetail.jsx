@@ -68,10 +68,10 @@ const NewsDetail = () => {
           <p className={article.id === 1 ? "hidden" : "block"}>
             <strong>{t('ost.contact')}</strong>{" "}
             <a
-              href="mailto:orientstar_hkg@orientstargroup.com"
+              href="mailto:Orientstar_hkg@orientstargroup.com"
               className="underline hover:text-sky-500"
             >
-              orientstar_hkg@orientstargroup.com
+              Orientstar_hkg@orientstargroup.com
             </a>
           </p>  
 

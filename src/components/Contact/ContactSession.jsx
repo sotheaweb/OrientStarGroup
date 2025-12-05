@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaLinkedinIn,
   FaYoutube,
@@ -7,9 +7,85 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { useTranslation } from "react-i18next";
+import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 const ContactSection = () => {
   const { t } = useTranslation("contact");
+
+  const [form, setForm] = useState({
+    email: "",
+    company: "",
+    name: "",
+    subject: "",
+    message: ""
+  });
+  
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    // ❌ Check empty required fields
+    if (
+      !form.email ||
+      !form.company ||
+      !form.name ||
+      !form.subject ||
+      !form.message
+    ) {
+      Swal.fire({
+        title: t("contact.form.missing"),
+        text: t("contact.form.descE"),
+        icon: "error",
+        confirmButtonText: t("contact.form.comfirm"),
+      });
+      return;
+    }
+  
+    emailjs
+      .send(
+        "service_dc3o8on",     // <-- Replace
+        "template_0khmzys",    // <-- Replace
+        {
+          from_email: form.email,
+          company: form.company,
+          from_name: form.name,
+          subject: form.subject,
+          message: form.message,
+        },
+        "JpPiRGUU0pI9GsfR0"       // <-- Replace
+      )
+      .then(() => {
+        Swal.fire({
+          title: t("contact.form.success"),
+          text: t("contact.form.descS"),
+          icon: "success",
+          confirmButtonText: t("contact.form.comfirm"),
+        });
+
+        // Reset form
+        setForm({
+          email: "",
+          company: "",
+          name: "",
+          subject: "",
+          message: ""
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          title: "Email Failed",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+        });
+      });
+    };
 
   return (
     <div className="bg-white px-6 sm:px-10 lg:px-20 py-16">
@@ -20,28 +96,27 @@ const ContactSection = () => {
         {/* ===== LEFT: Company Info ===== */}
         <div className="lg:pr-40">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 text-center md:text-left">
-            KH ORIENT STAR LOGISTICS CO., LTD.
+            {t('location.title')}
           </h2>
 
-          <p className="text-gray-700 mb-4 leading-relaxed">
-            <strong>Cambodia office</strong> :The Fortune Tower C7 16-07, Oknha Tep Phan St. (182) & Street 161,
-            Phum 7, Sangkat Veal Vong , Khan Prampi Makara, Phnom Penh , Cambodia
+          <p className="text-gray-700 mb-4 leading-relaxed mt-5">
+            {t('location.address')}
           </p>
 
           <p className="text-gray-700 mb-1">
-            <strong>Office phone :</strong>087 666 324/ 087 666 430 
+            {t('location.phone')}
           </p>
           <p className="text-sm mt-2 mb-2">
-            <strong>Email:</strong>{" "}
+            <strong>{t('location.email')}:</strong>{" "}
             <a
-              href="mailto:orientstar_hkg@orientstargroup.com"
+              href="mailto:Orientstar_hkg@orientstargroup.com"
               className="underline hover:text-sky-500"
             >
-              orientstar_hkg@orientstargroup.com
+              Orientstar_hkg@orientstargroup.com
             </a>
           </p>
 
-          <h4 className="text-lg font-semibold mb-3">Official Account</h4>
+          <h4 className="text-lg font-semibold mb-3">{t('location.account')}</h4>
           <div className="flex space-x-4">
             {[
               { icon: <FaLinkedinIn /> },
@@ -63,16 +138,22 @@ const ContactSection = () => {
         {/* ===== RIGHT: Inquiry Form ===== */}
         <div>
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">{t('form.title')}</h2>
-          <form className="flex flex-col gap-5">
+          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             {/* Row 1 */}
             <div className="flex flex-col sm:flex-row gap-4">
               <input
+                name="email"
                 type="email"
+                value={form.email}
+                onChange={handleChange}
                 placeholder= {t('form.email')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
               <input
+                name="company"
                 type="text"
+                value={form.company}
+                onChange={handleChange}
                 placeholder= {t('form.companyName')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
@@ -81,12 +162,18 @@ const ContactSection = () => {
             {/* Row 2 */}
             <div className="flex flex-col sm:flex-row gap-4">
               <input
+                name="name"
                 type="text"
+                value={form.name}
+                onChange={handleChange}
                 placeholder= {t('form.name')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
               <input
+                name="subject"
                 type="text"
+                value={form.subject}
+                onChange={handleChange}
                 placeholder= {t('form.subject')}
                 className="flex-1 p-3 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-400"
               />
@@ -94,6 +181,9 @@ const ContactSection = () => {
 
             {/* Message */}
             <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder= {t('form.message')}
               rows="5"
               className="w-full p-3 rounded-lg bg-gray-100 resize-none focus:outline-none focus:ring-2 focus:ring-sky-400"

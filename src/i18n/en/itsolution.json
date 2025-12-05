@@ -71,5 +71,21 @@
                 "desc": "Monitor inventory movements, storage usage, and picking activities instantly."
             }
         ]
+    },
+    
+    "clientExperience": {
+        "title": "Client Experience & Usability",
+        "desc": "Designed for ease of use and collaboration",
+        "items": {
+            "title": [
+                "Self-Service Portal",
+                "Direct Communication",
+                "Multi-language & Multi-user Access",
+                "Role-Based Access Control",
+                "Audit Trails & Activity Logs",
+                "Built-In Safeguards"
+            ],
+            "desc": "Full access of bookings, documents, and shipment updates anytime."
+        }
     }
 }

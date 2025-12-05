@@ -49,7 +49,7 @@ const NavbarScroll = ({ menu }) => {
 
   return (
     <nav className={`fixed w-full shadow-md z-40 transition-all duration-300 hidden lg:block
-        ${isAtTop ? "top-23 bg-sky-600 max-w-full" : "bottom-0"}`}
+        ${isAtTop ? "lg:top-20 bg-sky-600 max-w-full" : "bottom-0"}`}
     >
       <div className="container mx-auto px-4 py-3 border-t-1 border-white">
         <ul className="flex justify-around space-x-8 text-gray-100">

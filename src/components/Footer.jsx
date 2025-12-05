@@ -38,7 +38,7 @@ const Footer = () => {
           <p className="text-sm mt-2">
             {t('location.email')}:{" "}
             <a
-              href="mailto:orientstar_hkg@orientstargroup.com"
+              href="mailto:Orientstar_hkg@orientstargroup.com"
               className="underline hover:text-gray-200"
             >
               OSTPNH@orientstargroup.com
@@ -112,17 +112,23 @@ const Footer = () => {
             {t('contact.title')}
           </h3>
           <div className="flex space-x-3 mt-2">
-            {[FaLinkedinIn, FaYoutube, FaInstagram, FaFacebookF, FaXTwitter].map(
-              (Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition flex items-center justify-center text-white"
-                >
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
-                </a>
-              )
-            )}
+            {[
+              { icon: FaLinkedinIn, link: "https://www.linkedin.com/company/orient-star-group/" },
+              { icon: FaYoutube, link: "https://www.youtube.com/@orientstargroup1984" },
+              { icon: FaInstagram, link: "" },
+              { icon: FaFacebookF, link: "https://www.facebook.com/orientstargroup" },
+              { icon: FaXTwitter, link: "" },
+            ].map((item, i) => (
+              <a
+                key={i}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition flex items-center justify-center text-white"
+              >
+                <item.icon className="w-4 h-4 sm:w-5 sm:h-5" />
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -134,10 +140,7 @@ const Footer = () => {
             © 2025 Orient Star Transport International, Ltd. All rights reserved.
           </p>
           <p className="text-center md:text-right">
-            Powered by{" "}
-            <span className="font-medium text-white hover:text-gray-200 cursor-pointer">
-              vancheer
-            </span>
+            © 2025 copyright HM Webix
           </p>
         </div>
       </div>

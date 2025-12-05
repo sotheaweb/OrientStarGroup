@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const { t } = useTranslation("about");
@@ -40,22 +41,43 @@ const ContactUs = () => {
       return;
     }
 
-    // ✅ Success alert
-    Swal.fire({
-      title: t("contactUs.form.success"),
-      text: t("contactUs.form.descS"),
-      icon: "success",
-      confirmButtonText: t("contactUs.form.comfirm"),
-    });
+    emailjs
+      .send(
+        "service_dc3o8on",     // <-- Replace
+        "template_0khmzys",    // <-- Replace
+        {
+          from_email: form.email,
+          company: form.company,
+          from_name: form.name,
+          subject: form.subject,
+          message: form.message,
+        },
+        "JpPiRGUU0pI9GsfR0"       // <-- Replace
+      )
+      .then(() => {
+        Swal.fire({
+          title: t("contactUs.form.success"),
+          text: t("contactUs.form.descS"),
+          icon: "success",
+          confirmButtonText: t("contactUs.form.comfirm"),
+        });
 
-    // Reset form
-    setForm({
-      email: "",
-      company: "",
-      name: "",
-      subject: "",
-      message: ""
-    });
+        // Reset form
+        setForm({
+          email: "",
+          company: "",
+          name: "",
+          subject: "",
+          message: ""
+        });
+      })
+      .catch(() => {
+        Swal.fire({
+          title: "Email Failed",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+        });
+      });
   };
 
   return (

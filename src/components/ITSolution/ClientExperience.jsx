@@ -9,15 +9,15 @@ import c7 from "../../assets/ITSolution/c7.png";
 import { useTranslation } from "react-i18next";
 
 const ClientExperience = () => {
-  const { t } = useTranslation("itsolution");
+  const { t } = useTranslation("itSolution");
 
   const cardData = [
-    { image: c2, title: "Self-Service Portal", des: `Full access of bookings, documents, and shipment updates anytime.` },
-    { image: c3, title: "Direct Communication", des: `Full access of bookings, documents, and shipment updates anytime.` },
-    { image: c4, title: "Multi-language & Multi-user Access", des: `Full access of bookings, documents, and shipment updates anytime.` },
-    { image: c5, title: "Role-Based Access Control", des: `Full access of bookings, documents, and shipment updates anytime.` },
-    { image: c6, title: "Audit Trails & Activity Logs", des: `Full access of bookings, documents, and shipment updates anytime.` },
-    { image: c7, title: "Built-In Safeguards", des: `Full access of bookings, documents, and shipment updates anytime.` },
+    { image: c2, title: t('clientExperience.items.title.0'), des: t('clientExperience.items.desc') },
+    { image: c3, title: t('clientExperience.items.title.1'), des: t('clientExperience.items.desc') },
+    { image: c4, title: t('clientExperience.items.title.2'), des: t('clientExperience.items.desc') },
+    { image: c5, title: t('clientExperience.items.title.3'), des: t('clientExperience.items.desc') },
+    { image: c6, title: t('clientExperience.items.title.4'), des: t('clientExperience.items.desc') },
+    { image: c7, title: t('clientExperience.items.title.5'), des: t('clientExperience.items.desc') },
   ];
 
   return (
@@ -30,13 +30,13 @@ const ClientExperience = () => {
               data-aos="fade-rigth"
               data-aos-duration="1000"
             >
-              Client Experience & Usability
+              {t('clientExperience.title')}
             </h1>
             <p className="text-gray-600 mt-4 max-w-md text-sm sm:text-base text-start"
               data-aos="fade-rigth"
               data-aos-duration="1000"
             >
-              Designed for ease of use and collaboration
+              {t('clientExperience.desc')}
             </p>
           </div>
           <div
@@ -74,7 +74,7 @@ const ClientExperience = () => {
               </div>
 
               {/* Title */}
-              <h3 className="hidden lg:block absolute top-30 group-hover:opacity-0 text-sm"
+              <h3 className="hidden lg:block absolute top-30 group-hover:opacity-0 text-sm px-5"
               >
                 {service.title}
               </h3>
