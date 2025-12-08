@@ -67,7 +67,7 @@ const Navbar = () => {
 
               {/* Dropdown */}
               <div
-                className="absolute -left-10 top-22 mt-3 w-60 shadow-lg rounded-lg py-2 bg-white opacity-0 scale-y-0 origin-top transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-100"
+                className="absolute -left-10 top-20 mt-3 w-60 shadow-lg rounded-lg py-2 bg-white opacity-0 scale-y-0 origin-top transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-100"
               >
                 {menu.items.map((item) => (
                   <Link
@@ -100,7 +100,7 @@ const Navbar = () => {
 
             {/* Dropdown group */}
             <div
-              className={`absolute -left-5 top-23 mt-2 w-40 shadow-lg rounded-lg py-2 bg-white opacity-0 scale-y-0 origin-top transition-all duration-300 
+              className={`absolute -left-5 top-20 mt-2 w-40 shadow-lg rounded-lg py-2 bg-white opacity-0 scale-y-0 origin-top transition-all duration-300 
                 ${langDrop ? "opacity-100 scale-y-100" : ""}`}
             >
               <button

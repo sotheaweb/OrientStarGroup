@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
-import Services from "./pages/SeaFreight";
 import Contact from "./pages/Contact";
 import Newsroom from "./pages/Newsroom";
 import NewsDetail from "./pages/NewsDetail";

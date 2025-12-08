@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
+import { IoLogoWechat } from "react-icons/io5";
 import logo from "../assets/footer.png"; // Adjust path
 import { useTranslation } from "react-i18next";
 
@@ -115,9 +116,8 @@ const Footer = () => {
             {[
               { icon: FaLinkedinIn, link: "https://www.linkedin.com/company/orient-star-group/" },
               { icon: FaYoutube, link: "https://www.youtube.com/@orientstargroup1984" },
-              { icon: FaInstagram, link: "" },
               { icon: FaFacebookF, link: "https://www.facebook.com/orientstargroup" },
-              { icon: FaXTwitter, link: "" },
+              { icon: IoLogoWechat, link: "https://www.orientstargroup.com/en/wechat.php" },
             ].map((item, i) => (
               <a
                 key={i}

@@ -80,7 +80,7 @@ const VisibilityControl = () => {
         {/* Left button */}
         <button
           onClick={handlePrev}
-          className="absolute left-0 lg:left-10 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow hover:bg-gray-100 z-20"
+          className="absolute left-0 lg:left-10 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow hover:bg-gray-100 z-20 cursor-pointer"
         >
           <IoChevronBack className="text-2xl text-gray-700" />
         </button>
@@ -113,7 +113,7 @@ const VisibilityControl = () => {
         {/* Right button */}
         <button
           onClick={handleNext}
-          className="absolute right-0 lg:right-10 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow hover:bg-gray-100 z-20"
+          className="absolute right-0 lg:right-10 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white shadow hover:bg-gray-100 z-20 cursor-pointer"
         >
           <IoChevronForward className="text-2xl text-gray-700" />
         </button>

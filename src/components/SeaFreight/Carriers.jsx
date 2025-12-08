@@ -39,9 +39,11 @@ const Carriers = () => {
       >
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800">
-          Carriers, Routes & Modes
+          {t('carriers.title')}
         </h2>
-        <p className="text-center mt-5 text-gray-800">A comprehensive range of services are available for inbound, outbound and cross-trade movements.</p>
+        <p className="text-center mt-5 text-gray-800">
+          {t('carriers.desc')}
+        </p>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">

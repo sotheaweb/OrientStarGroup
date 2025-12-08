@@ -20,8 +20,8 @@
                 "desc": "យើងផ្តល់ជូនសេវាកម្មដឹកជញ្ជូនតាមអាកាសដែលប្ដូរតាមតម្រូវការ សម្រាប់ផ្លូវអន្តរជាតិធំៗ។"
             },
             "fast": {
-                "title": "Fast",
-                "desc": "Fast transit time for sample shipment and time sensitive shipments."
+                "title": "សេវាដឹកជញ្ជូនរហ័ស",
+                "desc": "ពេលវេលាដឹកជញ្ជូនលឿនរហ័ស និងទាន់ពេលវេលា។"
             },
             "door": {
                 "title": "Door",

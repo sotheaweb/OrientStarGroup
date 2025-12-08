@@ -6,6 +6,7 @@ import {
   FaFacebookF,
   FaXTwitter,
 } from "react-icons/fa6";
+import { IoLogoWechat } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
@@ -117,20 +118,22 @@ const ContactSection = () => {
           </p>
 
           <h4 className="text-lg font-semibold mb-3">{t('location.account')}</h4>
-          <div className="flex space-x-4">
+          <div className="flex space-x-3 mt-2">
             {[
-              { icon: <FaLinkedinIn /> },
-              { icon: <FaYoutube /> },
-              { icon: <FaInstagram /> },
-              { icon: <FaFacebookF /> },
-              { icon: <FaXTwitter /> },
-            ].map((social, i) => (
-              <div
+              { icon: FaLinkedinIn, link: "https://www.linkedin.com/company/orient-star-group/" },
+              { icon: FaYoutube, link: "https://www.youtube.com/@orientstargroup1984" },
+              { icon: FaFacebookF, link: "https://www.facebook.com/orientstargroup" },
+              { icon: IoLogoWechat, link: "https://www.orientstargroup.com/en/wechat.php" },
+            ].map((item, i) => (
+              <a
                 key={i}
-                className="w-10 h-10 flex items-center justify-center bg-gray-200 rounded-full text-gray-600 hover:bg-sky-500 hover:text-white transition-all duration-300 cursor-pointer"
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-full transition flex items-center justify-center bg-gray-200 text-gray-600 hover:bg-sky-500 hover:text-white"
               >
-                {social.icon}
-              </div>
+                <item.icon className="w-4 h-4 sm:w-4 sm:h-4" />
+              </a>
             ))}
           </div>
         </div>
